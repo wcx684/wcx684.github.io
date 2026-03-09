@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
@@ -66,14 +66,41 @@
 
 
 
+<style>
+body {
+  background-image: url('/images/bg.jpg') !important;
+  background-attachment: fixed !important; /* 背景固定，滚动时不动 */
+  background-size: cover !important;       /* 铺满屏幕 */
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-color: #f0f0f0;               /* 图片加载前的底色 */
+}
 
+/* 2. 关键步骤：让 NexT 的白色容器变透明，露出背景 */
+.main-container, 
+.content-wrap, 
+.post-block, 
+.comments, 
+.sidebar, 
+.header-inner, 
+.site-nav {
+  background: transparent !important;      /* 完全透明 */
+  /* 或者如果你想保留一点磨砂感，用下面这行代替上面那行： */
+  /* background: rgba(255, 255, 255, 0.6) !important; */
+}
+
+/* 3. 可选：给文章卡片加一点阴影，防止看不清文字 */
+.post-block {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+}
+</style>
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
-  </noscript>
+  </noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
-  <div class="headband"></div>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="headband"></div>
 
   <main class="main">
     <div class="column">
@@ -775,7 +802,7 @@
 
 <noscript>
   <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>

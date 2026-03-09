@@ -1420,7 +1420,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #01670b;
+    background: #4fffff;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2983,4 +2983,24 @@ header.header {
   .comments {
     padding: 10px 12px;
   }
+}
+body {
+  background-image: url("/images/bg.jpg") !important;
+  background-attachment: fixed !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-color: #f0f0f0;
+}
+.main-container,
+.content-wrap,
+.post-block,
+.comments,
+.sidebar,
+.header-inner,
+.site-nav {
+  background: transparent !important;
+}
+.post-block {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
 }
