@@ -47,4 +47,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
   sidebarToggleMotion.init();
+
+  // Category toggle functionality
+  document.querySelectorAll('.sidebar-cat-toggle').forEach(toggle => {
+    toggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      const postsList = this.nextElementSibling;
+      if (postsList.style.display === 'none' || postsList.style.display === '') {
+        postsList.style.display = 'block';
+      } else {
+        postsList.style.display = 'none';
+      }
+    });
+  });
 });
