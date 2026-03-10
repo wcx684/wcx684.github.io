@@ -1420,7 +1420,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #788e0d;
+    background: #3795ff;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3003,4 +3003,20 @@ body {
 }
 .post-block {
   box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+}
+/* make category child items closer to parent */
+.sidebar-cat-posts {
+  padding-left: 1.2em;
+}
+.sidebar-cat-posts li {
+  margin-bottom: 0.2em;
+}
+/* make category names slightly larger */
+.sidebar-cat-toggle {
+  font-size: 1.1em;
+  font-weight: 500;
+}
+/* make article titles under categories slightly smaller */
+.sidebar-cat-posts li a {
+  font-size: 0.9em;
 }
