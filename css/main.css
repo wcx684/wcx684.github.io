@@ -1385,7 +1385,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #ff096e;
+    background: #22ff0a;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3094,6 +3094,9 @@ body {
 }
 .global-floating-player .aplayer-pic {
   cursor: move;
+  border-radius: 18px 0 0 18px !important;
+  overflow: hidden !important;
+  background-clip: padding-box;
 }
 .global-floating-player .aplayer-music {
   cursor: move;

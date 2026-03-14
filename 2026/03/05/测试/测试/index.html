@@ -146,7 +146,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -160,18 +160,35 @@
   <div class="sidebar-categories-list">
     <ul>
         <li class="sidebar-cat">
+          <a href="/categories/%E6%B5%8B%E8%AF%95/" class="sidebar-cat-toggle">
+            测试 (2)
+          </a>
+          <ul class="sidebar-cat-posts" style="display: none;">
+              <li>
+                <a href="/2026/03/09/%E6%B5%8B%E8%AF%95/test/">
+                  test
+                </a>
+              </li>
+              <li>
+                <a href="/2026/03/05/%E6%B5%8B%E8%AF%95/%E6%B5%8B%E8%AF%95/">
+                  测试
+                </a>
+              </li>
+          </ul>
+        </li>
+        <li class="sidebar-cat">
           <a href="/categories/%E6%97%A5%E5%BF%97/" class="sidebar-cat-toggle">
             日志 (3)
           </a>
           <ul class="sidebar-cat-posts" style="display: none;">
               <li>
-                <a href="/2026/03/09/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-0309/">
-                  日志 0309
+                <a href="/2026/03/13/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-0313/">
+                  日志 0313
                 </a>
               </li>
               <li>
-                <a href="/2026/03/13/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-0313/">
-                  日志 0313
+                <a href="/2026/03/09/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-0309/">
+                  日志 0309
                 </a>
               </li>
               <li>
@@ -182,18 +199,23 @@
           </ul>
         </li>
         <li class="sidebar-cat">
-          <a href="/categories/%E6%B5%8B%E8%AF%95/" class="sidebar-cat-toggle">
-            测试 (2)
+          <a href="/categories/%E9%80%9A%E7%9F%A5/" class="sidebar-cat-toggle">
+            通知 (3)
           </a>
           <ul class="sidebar-cat-posts" style="display: none;">
               <li>
-                <a href="/2026/03/05/%E6%B5%8B%E8%AF%95/%E6%B5%8B%E8%AF%95/">
-                  测试
+                <a href="/2026/03/07/%E9%80%9A%E7%9F%A5/%E9%80%9A%E7%9F%A5/">
+                  通知
                 </a>
               </li>
               <li>
-                <a href="/2026/03/09/%E6%B5%8B%E8%AF%95/test/">
-                  test
+                <a href="/2026/03/07/%E9%80%9A%E7%9F%A5/%E9%83%BD%E7%BB%99%E6%88%91%E5%8E%BB%E7%8E%A9%E6%9D%80%E6%88%AE%E5%B0%96%E5%A1%942%EF%BC%81%EF%BC%81%EF%BC%81/">
+                  都给我去玩杀戮尖塔2！！！
+                </a>
+              </li>
+              <li>
+                <a href="/2026/03/14/%E9%80%9A%E7%9F%A5/%E9%87%8D%E5%A4%A7%E6%9B%B4%E6%96%B0/">
+                  重大更新！！！
                 </a>
               </li>
           </ul>
@@ -206,23 +228,6 @@
               <li>
                 <a href="/2026/03/12/%E7%AB%99%E9%95%BF%E6%8E%A8%E8%8D%90/%E7%AB%99%E9%95%BF%E6%8E%A8%E8%8D%90/">
                   站长推荐
-                </a>
-              </li>
-          </ul>
-        </li>
-        <li class="sidebar-cat">
-          <a href="/categories/%E9%80%9A%E7%9F%A5/" class="sidebar-cat-toggle">
-            通知 (2)
-          </a>
-          <ul class="sidebar-cat-posts" style="display: none;">
-              <li>
-                <a href="/2026/03/07/%E9%80%9A%E7%9F%A5/%E9%80%9A%E7%9F%A5/">
-                  通知
-                </a>
-              </li>
-              <li>
-                <a href="/2026/03/07/%E9%80%9A%E7%9F%A5/%E9%83%BD%E7%BB%99%E6%88%91%E5%8E%BB%E7%8E%A9%E6%9D%80%E6%88%AE%E5%B0%96%E5%A1%942%EF%BC%81%EF%BC%81%EF%BC%81/">
-                  都给我去玩杀戮尖塔2！！！
                 </a>
               </li>
           </ul>
@@ -457,6 +462,7 @@
   <script>
     (function () {
       var STORAGE_KEY = 'global_floating_player_pos_v3';
+      var DEFAULT_TRACK_KEYWORD = 'Outer Wilds';
 
       function enableDrag(panel) {
         if (!panel || panel.dataset.dragEnabled === '1') return;
@@ -547,10 +553,29 @@
         enableDrag(panel);
       }
 
+      function setDefaultTrack() {
+        try {
+          if (!window.aplayers || !window.aplayers.length) return;
+          var ap = window.aplayers[0];
+          var list = (ap.list && ap.list.audios) ? ap.list.audios : [];
+          if (!list.length) return;
+          var idx = list.findIndex(function (item) {
+            var name = (item && item.name) ? item.name : '';
+            return name.toLowerCase().indexOf(DEFAULT_TRACK_KEYWORD.toLowerCase()) !== -1;
+          });
+          if (idx >= 0 && ap.list && typeof ap.list.switch === 'function') {
+            ap.list.switch(idx);
+            ap.pause();
+          }
+        } catch (err) {}
+      }
+
       document.addEventListener('DOMContentLoaded', function () {
         initPanel();
         setTimeout(initPanel, 500);
         setTimeout(initPanel, 1200);
+        setTimeout(setDefaultTrack, 1200);
+        setTimeout(setDefaultTrack, 2500);
       });
     })();
   </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
