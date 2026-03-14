@@ -158,23 +158,6 @@
   <div class="sidebar-categories-list">
     <ul>
         <li class="sidebar-cat">
-          <a href="/categories/%E6%B5%8B%E8%AF%95/" class="sidebar-cat-toggle">
-            测试 (2)
-          </a>
-          <ul class="sidebar-cat-posts" style="display: none;">
-              <li>
-                <a href="/2026/03/09/%E6%B5%8B%E8%AF%95/test/">
-                  test
-                </a>
-              </li>
-              <li>
-                <a href="/2026/03/05/%E6%B5%8B%E8%AF%95/%E6%B5%8B%E8%AF%95/">
-                  测试
-                </a>
-              </li>
-          </ul>
-        </li>
-        <li class="sidebar-cat">
           <a href="/categories/%E6%97%A5%E5%BF%97/" class="sidebar-cat-toggle">
             日志 (3)
           </a>
@@ -197,18 +180,18 @@
           </ul>
         </li>
         <li class="sidebar-cat">
-          <a href="/categories/%E9%80%9A%E7%9F%A5/" class="sidebar-cat-toggle">
-            通知 (2)
+          <a href="/categories/%E6%B5%8B%E8%AF%95/" class="sidebar-cat-toggle">
+            测试 (2)
           </a>
           <ul class="sidebar-cat-posts" style="display: none;">
               <li>
-                <a href="/2026/03/07/%E9%80%9A%E7%9F%A5/%E9%80%9A%E7%9F%A5/">
-                  通知
+                <a href="/2026/03/05/%E6%B5%8B%E8%AF%95/%E6%B5%8B%E8%AF%95/">
+                  测试
                 </a>
               </li>
               <li>
-                <a href="/2026/03/07/%E9%80%9A%E7%9F%A5/%E9%83%BD%E7%BB%99%E6%88%91%E5%8E%BB%E7%8E%A9%E6%9D%80%E6%88%AE%E5%B0%96%E5%A1%942%EF%BC%81%EF%BC%81%EF%BC%81/">
-                  都给我去玩杀戮尖塔2！！！
+                <a href="/2026/03/09/%E6%B5%8B%E8%AF%95/test/">
+                  test
                 </a>
               </li>
           </ul>
@@ -221,6 +204,23 @@
               <li>
                 <a href="/2026/03/12/%E7%AB%99%E9%95%BF%E6%8E%A8%E8%8D%90/%E7%AB%99%E9%95%BF%E6%8E%A8%E8%8D%90/">
                   站长推荐
+                </a>
+              </li>
+          </ul>
+        </li>
+        <li class="sidebar-cat">
+          <a href="/categories/%E9%80%9A%E7%9F%A5/" class="sidebar-cat-toggle">
+            通知 (2)
+          </a>
+          <ul class="sidebar-cat-posts" style="display: none;">
+              <li>
+                <a href="/2026/03/07/%E9%80%9A%E7%9F%A5/%E9%80%9A%E7%9F%A5/">
+                  通知
+                </a>
+              </li>
+              <li>
+                <a href="/2026/03/07/%E9%80%9A%E7%9F%A5/%E9%83%BD%E7%BB%99%E6%88%91%E5%8E%BB%E7%8E%A9%E6%9D%80%E6%88%AE%E5%B0%96%E5%A1%942%EF%BC%81%EF%BC%81%EF%BC%81/">
+                  都给我去玩杀戮尖塔2！！！
                 </a>
               </li>
           </ul>
@@ -366,7 +366,128 @@
 
 <noscript>
   <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</noscript>
+
+  <link rel="stylesheet" href="/assets/css/APlayer.min.css">
+  <script src="/assets/js/APlayer.min.js"></script>
+  <script src="/assets/js/Meting.min.js"></script>
+
+  <div
+    class="aplayer global-floating-player"
+    data-server="tencent"
+    data-type="playlist"
+    data-id="9289836266"
+    data-fixed="false"
+    data-mini="false"
+    data-autoplay="false"
+    data-loop="all"
+    data-order="list"
+    data-volume="0.7"
+    data-listfolded="true"
+    data-listmaxheight="300px">
+  </div>
+
+  <script>
+    (function () {
+      var STORAGE_KEY = 'global_floating_player_pos_v3';
+
+      function enableDrag(panel) {
+        if (!panel || panel.dataset.dragEnabled === '1') return;
+        panel.dataset.dragEnabled = '1';
+
+        var startX = 0, startY = 0, baseX = 0, baseY = 0;
+        var dragging = false;
+
+        function point(e) {
+          return (e.touches && e.touches[0]) ? e.touches[0] : e;
+        }
+
+        function onStart(e) {
+          if (e.target.closest && e.target.closest('.aplayer-controller, .aplayer-time, .aplayer-icon, .aplayer-volume-wrap, .aplayer-list, .aplayer-list ol, .aplayer-list li, button')) {
+            return;
+          }
+          dragging = true;
+          var p = point(e);
+          var rect = panel.getBoundingClientRect();
+          startX = p.clientX;
+          startY = p.clientY;
+          baseX = rect.left;
+          baseY = rect.top;
+          panel.style.left = baseX + 'px';
+          panel.style.top = baseY + 'px';
+          panel.style.right = 'auto';
+          panel.style.bottom = 'auto';
+        }
+
+        function onMove(e) {
+          if (!dragging) return;
+          var p = point(e);
+          panel.style.left = Math.max(0, baseX + (p.clientX - startX)) + 'px';
+          panel.style.top = Math.max(0, baseY + (p.clientY - startY)) + 'px';
+          e.preventDefault();
+        }
+
+        function onEnd() {
+          if (!dragging) return;
+          dragging = false;
+          try {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify({
+              left: panel.style.left || '',
+              top: panel.style.top || ''
+            }));
+          } catch (err) {}
+        }
+
+        function onReset() {
+          panel.style.right = '16px';
+          panel.style.bottom = '16px';
+          panel.style.left = 'auto';
+          panel.style.top = 'auto';
+          try { localStorage.removeItem(STORAGE_KEY); } catch (err) {}
+        }
+
+        panel.addEventListener('mousedown', onStart);
+        document.addEventListener('mousemove', onMove);
+        document.addEventListener('mouseup', onEnd);
+        panel.addEventListener('touchstart', onStart, { passive: true });
+        document.addEventListener('touchmove', onMove, { passive: false });
+        document.addEventListener('touchend', onEnd);
+        panel.addEventListener('dblclick', onReset);
+      }
+
+      function applySavedPosition(panel) {
+        try {
+          var saved = localStorage.getItem(STORAGE_KEY);
+          if (!saved) return;
+          var pos = JSON.parse(saved);
+          if (!pos || !pos.left || !pos.top) return;
+          panel.style.left = pos.left;
+          panel.style.top = pos.top;
+          panel.style.right = 'auto';
+          panel.style.bottom = 'auto';
+        } catch (err) {}
+      }
+
+      function initPanel() {
+        var panel = document.querySelector('.global-floating-player');
+        if (!panel) return;
+        panel.style.position = 'fixed';
+        panel.style.right = '16px';
+        panel.style.bottom = '16px';
+        panel.style.left = 'auto';
+        panel.style.top = 'auto';
+        applySavedPosition(panel);
+        enableDrag(panel);
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        initPanel();
+        setTimeout(initPanel, 500);
+        setTimeout(initPanel, 1200);
+      });
+    })();
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
 
 </body>
 </html>
