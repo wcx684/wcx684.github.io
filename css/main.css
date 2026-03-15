@@ -1385,7 +1385,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #71ff99;
+    background: #a17428;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2986,6 +2986,10 @@ body {
 }
 .main-inner .post-block:not(:first-child):not(:first-child) {
   box-shadow: 0 1px 2px rgba(0,0,0,0.1) !important;
+}
+/* Keep post images fully opaque in dark mode */
+.post-body img {
+  opacity: 1 !important;
 }
 /* Make the follow-me box shorter (lower height) */
 .followme {
