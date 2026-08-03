@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>日志 0309</title>
+    <url>/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-0309/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>添加背景图，修复侧边栏。</p>
+]]></content>
+      <categories>
+        <category>日志</category>
+      </categories>
+  </entry>
+  <entry>
     <title>日志 0313</title>
     <url>/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-0313/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>默认深色模式，模式切换按钮以后再写<br>进行了一些界面美化，现在首页文章只会显示第一行</p>
@@ -28,6 +37,24 @@
       </categories>
   </entry>
   <entry>
+    <title>test test test test test test test test test test test</title>
+    <url>/%E6%B5%8B%E8%AF%95/test/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>test   test   test   test   test   test   test   test  test   test   test   test   test   test   test   test  test   test   test   test   test   test   test test   test   test   test   test   test   test   test  test   test   test   test   test   test   test   test  test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test </p>
+]]></content>
+      <categories>
+        <category>测试</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>测试</title>
+    <url>/%E6%B5%8B%E8%AF%95/%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这只是一个测试文档</p>
+]]></content>
+      <categories>
+        <category>测试</category>
+      </categories>
+  </entry>
+  <entry>
     <title>日志 0425</title>
     <url>/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-0425/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>1.修复音乐播放器无法加载的问题：主要原因是i-meto炸了，现已替换为injahow（感谢开源！）<br>2.添加浅色模式背景，进行界面美化。<br>3.现在可以直达本网站的歌单了（需要登陆QQ音乐）<br>4.以及一些其他的小巧思（向大厂对齐）</p>
@@ -45,33 +72,6 @@
 ]]></content>
       <categories>
         <category>日志</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>日志 0309</title>
-    <url>/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-0309/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>添加背景图，修复侧边栏。</p>
-]]></content>
-      <categories>
-        <category>日志</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>测试</title>
-    <url>/%E6%B5%8B%E8%AF%95/%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这只是一个测试文档</p>
-]]></content>
-      <categories>
-        <category>测试</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>站长推荐</title>
-    <url>/%E7%AB%99%E9%95%BF%E6%8E%A8%E8%8D%90/%E7%AB%99%E9%95%BF%E6%8E%A8%E8%8D%90/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>没想到有一天我也可以当上网站站长，那必须给你们写点站长推荐了😋😋😋</p>
-]]></content>
-      <categories>
-        <category>站长推荐</category>
       </categories>
   </entry>
   <entry>
@@ -95,6 +95,23 @@
       </categories>
   </entry>
   <entry>
+    <title>现在，所有人播放春日影！</title>
+    <url>/%E9%80%9A%E7%9F%A5/%E7%8E%B0%E5%9C%A8%EF%BC%8C%E6%89%80%E6%9C%89%E4%BA%BA%E6%92%AD%E6%94%BE%E6%98%A5%E6%97%A5%E5%BD%B1%EF%BC%81/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>为什么要演奏春日影 ？！</p>
+<p><img src="/../../images/cry.png" alt="神秘棕发女.jpg" title="！？强强？！"></p>
+<div align="center">
+  <small>神秘棕发女.jpg</small>
+</div>
+<br>
+
+<p><img src="/../../images/3151.png"></p>
+<p>顺便测试一下插入图片</p>
+]]></content>
+      <categories>
+        <category>通知</category>
+      </categories>
+  </entry>
+  <entry>
     <title>饮血成颜料，挥毫此世间--《武士零》推荐</title>
     <url>/%E7%AB%99%E9%95%BF%E6%8E%A8%E8%8D%90/Katana-ZERO/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>作为第一篇游戏推荐，我本来是想写星际拓荒的，毕竟本站背景就来源于此。但是武士零让我第一次产生了独立游戏的概念，带给了我第一次来自第九艺术的震撼，所以我一直对武士零有种不一样的感觉。所以根据先来后到，星际拓荒就再鸽一会吧。。。<br><br>雨夜，花茶，武士刀 —— 这是武士零带给我的第一印象，安宁中杀戮的艺术，这是我给武士零的评语。一击必杀的机制产生的爽快感无可比拟，后来也被闪避刺客所借鉴。时停反而算是降低难度的功能，熟练以后可以完全舍弃，体验一气呵成的杀戮艺术。其设定也称得上巧妙，完美融入游戏核心机制，而不止于自圆其说。总的来说，武士零是一部小而精的佳作，评价给到夯。<br><br>以下内容可能会有轻微剧透，但基本不会影响游玩体验<br><img src="/../../images/04271.jpg"></p>
@@ -114,29 +131,21 @@
       </categories>
   </entry>
   <entry>
-    <title>test test test test test test test test test test test</title>
-    <url>/%E6%B5%8B%E8%AF%95/test/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>test   test   test   test   test   test   test   test  test   test   test   test   test   test   test   test  test   test   test   test   test   test   test test   test   test   test   test   test   test   test  test   test   test   test   test   test   test   test  test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test </p>
-]]></content>
-      <categories>
-        <category>测试</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>现在，所有人播放春日影！</title>
-    <url>/%E9%80%9A%E7%9F%A5/%E7%8E%B0%E5%9C%A8%EF%BC%8C%E6%89%80%E6%9C%89%E4%BA%BA%E6%92%AD%E6%94%BE%E6%98%A5%E6%97%A5%E5%BD%B1%EF%BC%81/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>为什么要演奏春日影 ？！</p>
-<p><img src="/../../images/cry.png" alt="神秘棕发女.jpg" title="！？强强？！"></p>
-<div align="center">
-  <small>神秘棕发女.jpg</small>
-</div>
-<br>
-
-<p><img src="/../../images/3151.png"></p>
-<p>顺便测试一下插入图片</p>
+    <title>都给我去玩杀戮尖塔2！！！</title>
+    <url>/%E9%80%9A%E7%9F%A5/%E9%83%BD%E7%BB%99%E6%88%91%E5%8E%BB%E7%8E%A9%E6%9D%80%E6%88%AE%E5%B0%96%E5%A1%942%EF%BC%81%EF%BC%81%EF%BC%81/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这是真好玩</p>
 ]]></content>
       <categories>
         <category>通知</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>站长推荐</title>
+    <url>/%E7%AB%99%E9%95%BF%E6%8E%A8%E8%8D%90/%E7%AB%99%E9%95%BF%E6%8E%A8%E8%8D%90/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>没想到有一天我也可以当上网站站长，那必须给你们写点站长推荐了😋😋😋</p>
+]]></content>
+      <categories>
+        <category>站长推荐</category>
       </categories>
   </entry>
   <entry>
@@ -160,7 +169,7 @@
   <entry>
     <title>当我到20岁时，我在想些什么</title>
     <url>/%E9%9A%8F%E7%AC%94/20-years/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>再过不到两个小时，我年龄的数字在统计学中就是20了，一个整数。而整数总是有纪念意义的，所以我觉得自己得写点什么。回顾我这20年，前十年基本属于未开智状态，而后面十年也大部分处于受教育阶段。一是没有什么拿得出手的成就，二是自己的思想也确实没有完全成熟，所以真的不知道该如何评价。总的来说我这20年算是平稳度过了，既然没有什么苦难可以铭记，那就写写20岁的我都在想些什么吧。<br><br>其实想到我已经20岁了还是有点难以置信的，在我的印象里20岁已经完全是社会人了，但我现在感觉还处于适应阶段。所谓“大人”平时做的上班、开车、做饭之类的事情，我都已经经历过了，但是这些还远远没有融入我的日常生活。我可能还是没有完全意识到我已经长大了，开始拥有社会地位了，内心还是没有接受我马上要变成社畜的现实。不过照例还是要感慨一下时光的飞逝，记得小学的时候还一直盼望着到18岁就能自由了，现在居然已经20岁了，都开始奔三了。可惜的是以前想象中的很多事都没有做到，或者是根本没有那么美好，所谓的自由并不是嘴上说说那么简单。总感觉20岁听起来就和18、19岁不一样，仿佛有某种质变。但是现在的我和17岁的我又有什么本质上的不同呢？我不明白。总感觉现在的大学生活就像在逼着刚高考完的学生快速适应社会，然后不管你有没有适应就扔到社会里历练，所以我时常感觉我身边的大部分人其实都是迷茫的，无非是有没有表现出来，而我也一样。<br><br>20岁的我能想些什么呢？无非就是在学习和打游戏之外，苦恼于处理麻烦的人际关系，努力社会化。依旧是充满对未来的莫名的担忧，再就是想办法多凑点项目，顶着实习压力努力多玩几天罢了。那20岁之后的我呢？能够享受大学生活的日子也不多了，后面只能出到社会上再去适应了。后面的十年很可能就是我人生中最重要的十年了，希望我能交出一份令自己满意的答卷。至少要让我的下一个十年回顾有东西可写。<br><br>最后，祝我20岁生日快乐。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>再过不到两个小时，我年龄的数字在统计学中就是20了，一个整数。而整数总是有纪念意义的，所以我觉得自己得写点什么。回顾我这20年，前十年基本属于未开智状态，而后面十年也大部分处于受教育阶段。一是没有什么拿得出手的成就，二是自己的思想也确实没有完全成熟，所以真的不知道该如何评价。总的来说我这20年算是平稳度过了，既然没有什么苦难可以铭记，那就写写20岁的我都在想些什么吧。<br><br>20岁的我会想些什么呢？其实意识到自己已经20岁了还是有点难以置信的，在我的印象里20岁已经完全是社会人了，但我现在感觉自己还处于适应阶段。所谓“大人”平时做的上班、开车、做饭之类的事情，我都已经经历过了，但是这些还远远没有融入我的日常生活。我可能还是没有完全意识到我已经长大了，开始拥有社会地位了，内心还是没有接受我马上要变成社畜的现实。不过照例还是要感慨一下时光的飞逝，记得小学的时候还一直盼望着到18岁就能自由了，现在居然已经20岁了，都开始奔三了。可惜的是以前想象中的很多事都没有做到，或者是根本没有那么美好，所谓的自由并不是嘴上说说那么简单。总感觉20岁听起来就和18、19岁不一样，仿佛有某种质变。但是现在的我和17岁的我又有什么本质上的不同呢？我不明白。总感觉现在的大学生活就像在逼着刚高考完的学生快速适应社会，然后不管你有没有适应就扔到社会里历练，所以我时常感觉我身边的大部分人其实都是迷茫的，无非是有没有表现出来，而我也一样。<br><br>20岁的我能想些什么呢？无非就是在学习和打游戏之外，苦恼于处理麻烦的人际关系，努力社会化。依旧是充满对未来的莫名的担忧，再就是总想多凑点项目，顶着实习压力想办法让自己多玩几天罢了。那20岁之后的我呢？能够享受大学生活的日子也真的不多了，后面只能出到社会上再去适应了。后面的十年很可能就是我人生中最重要的十年了，希望我能交出一份令自己满意的答卷。至少也要让我的下一个十年回顾有东西可写吧。<br><br>最后，祝我20岁生日快乐。</p>
 ]]></content>
       <categories>
         <category>随笔</category>
@@ -170,15 +179,6 @@
     <title>通知</title>
     <url>/%E9%80%9A%E7%9F%A5/%E9%80%9A%E7%9F%A5/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>由于站长沉迷杀戮尖塔2，本站暂停更新维护，等有空再说。</p>
-]]></content>
-      <categories>
-        <category>通知</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>都给我去玩杀戮尖塔2！！！</title>
-    <url>/%E9%80%9A%E7%9F%A5/%E9%83%BD%E7%BB%99%E6%88%91%E5%8E%BB%E7%8E%A9%E6%9D%80%E6%88%AE%E5%B0%96%E5%A1%942%EF%BC%81%EF%BC%81%EF%BC%81/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这是真好玩</p>
 ]]></content>
       <categories>
         <category>通知</category>
