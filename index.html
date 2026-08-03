@@ -1,0 +1,1623 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/1.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/1.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/1.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"wcx684.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":{"enable":true,"button":true,"default":"dark"},"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12,"onmobile":false},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":220,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="随缘更新一些我感兴趣的东西">
+<meta property="og:type" content="website">
+<meta property="og:title" content="我才醒的神秘小站">
+<meta property="og:url" content="https://wcx684.github.io/">
+<meta property="og:site_name" content="我才醒的神秘小站">
+<meta property="og:description" content="随缘更新一些我感兴趣的东西">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="我才醒">
+<meta property="article:tag" content="博客">
+<meta property="article:tag" content="ACG">
+<meta property="article:tag" content="生活">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://wcx684.github.io/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"index.html","title":""}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>我才醒的神秘小站</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/pjax.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+<script>
+// Avoid document.write fallback because deferred CDN script may not be ready yet,
+// which can lead to duplicate PJAX runtimes and unstable navigation state.
+window.addEventListener('DOMContentLoaded', function () {
+  if (typeof window.Pjax !== 'undefined') return;
+  var local = document.createElement('script');
+  local.src = '/js/pjax.local.min.js';
+  local.async = false;
+  document.head.appendChild(local);
+});
+</script>
+<style>
+body {
+  background-image: url('/images/bg.jpg') !important;
+  background-attachment: fixed !important; /* 背景固定，滚动时不动 */
+  background-size: cover !important;       /* 铺满屏幕 */
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-color: #0f1115;               /* 图片加载前的底色 */
+}
+
+/* 2. 关键步骤：让 NexT 的白色容器变透明，露出背�?*/
+.main-container, 
+.content-wrap, 
+.post-block, 
+.comments, 
+.sidebar, 
+.header-inner, 
+.site-nav {
+  background: transparent !important;      /* 完全透明 */
+  /* 或者如果你想保留一点磨砂感，用下面这行代替上面那行�?*/
+  /* background: rgba(255, 255, 255, 0.6) !important; */
+}
+
+/* 3. 可选：给文章卡片加一点阴影，防止看不清文�?*/
+.post-block {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+}
+</style>
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">我才醒的神秘小站</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">瞎写的个人博客</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          
+<div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a href="/author/" aria-label="关于作者">
+      <img class="site-author-image" itemprop="image" alt="我才醒"
+        src="/images/avatar.jpg">
+    <p class="site-author-name" itemprop="name">我才醒</p>
+  </a>
+  <div class="site-description" itemprop="description">随缘更新一些我感兴趣的东西</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="sidebar-categories-list">
+    <ul>
+        <li class="sidebar-cat">
+          <a href="/categories/%E6%97%A5%E5%BF%97/" class="sidebar-cat-toggle">
+            日志 (6)
+          </a>
+          <ul class="sidebar-cat-posts" style="display: none;">
+              <li>
+                <a href="/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-0313/">
+                  日志 0313
+                </a>
+              </li>
+              <li>
+                <a href="/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-0314/">
+                  日志 0314
+                </a>
+              </li>
+              <li>
+                <a href="/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-0410/">
+                  日志 0410
+                </a>
+              </li>
+              <li>
+                <a href="/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-0425/">
+                  日志 0425
+                </a>
+              </li>
+              <li>
+                <a href="/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-0427/">
+                  日志 0427
+                </a>
+              </li>
+              <li>
+                <a href="/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-0309/">
+                  日志 0309
+                </a>
+              </li>
+          </ul>
+        </li>
+        <li class="sidebar-cat">
+          <a href="/categories/%E6%B5%8B%E8%AF%95/" class="sidebar-cat-toggle">
+            测试 (2)
+          </a>
+          <ul class="sidebar-cat-posts" style="display: none;">
+              <li>
+                <a href="/%E6%B5%8B%E8%AF%95/%E6%B5%8B%E8%AF%95/">
+                  测试
+                </a>
+              </li>
+              <li>
+                <a href="/%E6%B5%8B%E8%AF%95/test/">
+                  test test test test test test test test test test test
+                </a>
+              </li>
+          </ul>
+        </li>
+        <li class="sidebar-cat">
+          <a href="/categories/%E7%AB%99%E9%95%BF%E6%8E%A8%E8%8D%90/" class="sidebar-cat-toggle">
+            站长推荐 (2)
+          </a>
+          <ul class="sidebar-cat-posts" style="display: none;">
+              <li>
+                <a href="/%E7%AB%99%E9%95%BF%E6%8E%A8%E8%8D%90/%E7%AB%99%E9%95%BF%E6%8E%A8%E8%8D%90/">
+                  站长推荐
+                </a>
+              </li>
+              <li>
+                <a href="/%E7%AB%99%E9%95%BF%E6%8E%A8%E8%8D%90/Katana-ZERO/">
+                  饮血成颜料，挥毫此世间--《武士零》推荐
+                </a>
+              </li>
+          </ul>
+        </li>
+        <li class="sidebar-cat">
+          <a href="/categories/%E7%A7%91%E5%B9%BB/" class="sidebar-cat-toggle">
+            科幻 (1)
+          </a>
+          <ul class="sidebar-cat-posts" style="display: none;">
+              <li>
+                <a href="/%E7%A7%91%E5%B9%BB/%E6%97%85%E8%A1%8C%E8%80%85/">
+                  旅行者
+                </a>
+              </li>
+          </ul>
+        </li>
+        <li class="sidebar-cat">
+          <a href="/categories/%E9%80%9A%E7%9F%A5/" class="sidebar-cat-toggle">
+            通知 (4)
+          </a>
+          <ul class="sidebar-cat-posts" style="display: none;">
+              <li>
+                <a href="/%E9%80%9A%E7%9F%A5/%E7%8E%B0%E5%9C%A8%EF%BC%8C%E6%89%80%E6%9C%89%E4%BA%BA%E6%92%AD%E6%94%BE%E6%98%A5%E6%97%A5%E5%BD%B1%EF%BC%81/">
+                  现在，所有人播放春日影！
+                </a>
+              </li>
+              <li>
+                <a href="/%E9%80%9A%E7%9F%A5/%E9%87%8D%E5%A4%A7%E6%9B%B4%E6%96%B0/">
+                  重大更新！！！
+                </a>
+              </li>
+              <li>
+                <a href="/%E9%80%9A%E7%9F%A5/%E9%80%9A%E7%9F%A5/">
+                  通知
+                </a>
+              </li>
+              <li>
+                <a href="/%E9%80%9A%E7%9F%A5/%E9%83%BD%E7%BB%99%E6%88%91%E5%8E%BB%E7%8E%A9%E6%9D%80%E6%88%AE%E5%B0%96%E5%A1%942%EF%BC%81%EF%BC%81%EF%BC%81/">
+                  都给我去玩杀戮尖塔2！！！
+                </a>
+              </li>
+          </ul>
+        </li>
+        <li class="sidebar-cat">
+          <a href="/categories/%E9%9A%8F%E7%AC%94/" class="sidebar-cat-toggle">
+            随笔 (3)
+          </a>
+          <ul class="sidebar-cat-posts" style="display: none;">
+              <li>
+                <a href="/%E9%9A%8F%E7%AC%94/%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99%E7%9A%84%E5%88%9B%E5%BB%BA/">
+                  关于本站的创建
+                </a>
+              </li>
+              <li>
+                <a href="/%E9%9A%8F%E7%AC%94/20-years/">
+                  当我到20岁时，我在想些什么
+                </a>
+              </li>
+              <li>
+                <a href="/%E9%9A%8F%E7%AC%94/%E9%9A%8F%E4%BE%BF%E5%86%99%E7%82%B9/">
+                  随便写点
+                </a>
+              </li>
+          </ul>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          友情链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://imicola.com/" title="https:&#x2F;&#x2F;imicola.com" rel="noopener" target="_blank">imicola的猫窝</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://alisa22580.pages.dev/" title="https:&#x2F;&#x2F;alisa22580.pages.dev&#x2F;" rel="noopener" target="_blank">Alisa 的小站</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wcx684.github.io/%E9%9A%8F%E7%AC%94/20-years/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="我才醒">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我才醒的神秘小站">
+      <meta itemprop="description" content="随缘更新一些我感兴趣的东西">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 我才醒的神秘小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/%E9%9A%8F%E7%AC%94/20-years/" class="post-title-link" itemprop="url">当我到20岁时，我在想些什么</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2026-08-03 00:00:00 / 修改时间：23:53:11" itemprop="dateCreated datePublished" datetime="2026-08-03T00:00:00+08:00">2026-08-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%9A%8F%E7%AC%94/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>790</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>再过不到两个小时，我年龄的数字在统计学中就是20了，一个整数。而整数总是有纪念意义的，所以我觉得自己得写点什么。回顾我这20年，前十年基本属于未开智状态，而后面十年也大部分处于受教育阶段。一是没有什么拿得出手的成就，二是自己的思想也确实没有完全成熟，所以真的不知道该如何评价。总的来说我这20年算是平稳度过了，既然没有什么苦难可以铭记，那就写写20岁的我都在想些什么吧。<br><br>其实想到我已经20岁了还是有点难以置信的，在我的印象里20岁已经完全是社会人了，但我现在感觉还处于适应阶段。所谓“大人”平时做的上班、开车、做饭之类的事情，我都已经经历过了，但是这些还远远没有融入我的日常生活。我可能还是没有完全意识到我已经长大了，开始拥有社会地位了，内心还是没有接受我马上要变成社畜的现实。不过照例还是要感慨一下时光的飞逝，记得小学的时候还一直盼望着到18岁就能自由了，现在居然已经20岁了，都开始奔三了。可惜的是以前想象中的很多事都没有做到，或者是根本没有那么美好，所谓的自由并不是嘴上说说那么简单。总感觉20岁听起来就和18、19岁不一样，仿佛有某种质变。但是现在的我和17岁的我又有什么本质上的不同呢？我不明白。总感觉现在的大学生活就像在逼着刚高考完的学生快速适应社会，然后不管你有没有适应就扔到社会里历练，所以我时常感觉我身边的大部分人其实都是迷茫的，无非是有没有表现出来，而我也一样。<br><br>20岁的我能想些什么呢？无非就是在学习和打游戏之外，苦恼于处理麻烦的人际关系，努力社会化。依旧是充满对未来的莫名的担忧，再就是想办法多凑点项目，顶着实习压力努力多玩几天罢了。那20岁之后的我呢？能够享受大学生活的日子也不多了，后面只能出到社会上再去适应了。后面的十年很可能就是我人生中最重要的十年了，希望我能交出一份令自己满意的答卷。至少要让我的下一个十年回顾有东西可写。<br><br>最后，祝我20岁生日快乐。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wcx684.github.io/%E9%9A%8F%E7%AC%94/%E9%9A%8F%E4%BE%BF%E5%86%99%E7%82%B9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="我才醒">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我才醒的神秘小站">
+      <meta itemprop="description" content="随缘更新一些我感兴趣的东西">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 我才醒的神秘小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/%E9%9A%8F%E7%AC%94/%E9%9A%8F%E4%BE%BF%E5%86%99%E7%82%B9/" class="post-title-link" itemprop="url">随便写点</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-05-26 00:00:00" itemprop="dateCreated datePublished" datetime="2026-05-26T00:00:00+08:00">2026-05-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-08-03 02:12:17" itemprop="dateModified" datetime="2026-08-03T02:12:17+08:00">2026-08-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%9A%8F%E7%AC%94/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>547</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>突然发现博客已经快一个月没更新了，还是随便写点东西吧。说到底这个网站是我vibecoding的产物，也就是我练习使用ai，了解如何搭建网站的试验品。通过完善这个网站，我也亲身体会到了ai的迅猛发展与局限性，也大概知道前端是个什么东西了。要说对我专业水平有什么提升，大概是没有的。但我至少会在github上搭项目了，也算是一大进步。要问我为什么想要搭网站，不为什么，就是觉得有自己的网站是个很牛逼的事。现在大部分人都没有，而我有，真是太小众了😋当然，我搭建个人网站也是希望在互联网有一片自留地，而不会受到各大平台的限制。<br><br>刚开始写博客的时候确实是兴致满满，一点点的改界面布局，增加网站功能。但是现在都完善的差不多了，反而就放在一边渐渐淡忘了。而我又总是怕麻烦，即使有时候突然有好的点子想写下来，想了想又觉得挺麻烦的就没有行动。果然人除了强制执行就只有兴趣驱动了，也就是三分钟热度。但至少我不会忘了这个网站，再怎么说也不会让它这么早就被扫进互联网的垃圾堆里。至于到底有没有人会看，我也无所谓。反正我短期内不会加评论之类的功能，有没有人看我也不知道。想写啥写啥，反正也联系不到我。以后如果提到网站，我还可以超绝不经意间露出我的网站链接，狠狠装一波。所以，尽管没什么有价值的内容，我也会尽量随便写点的！</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wcx684.github.io/%E7%AB%99%E9%95%BF%E6%8E%A8%E8%8D%90/Katana-ZERO/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="我才醒">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我才醒的神秘小站">
+      <meta itemprop="description" content="随缘更新一些我感兴趣的东西">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 我才醒的神秘小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/%E7%AB%99%E9%95%BF%E6%8E%A8%E8%8D%90/Katana-ZERO/" class="post-title-link" itemprop="url">饮血成颜料，挥毫此世间--《武士零》推荐</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-04-27 17:30:46" itemprop="dateCreated datePublished" datetime="2026-04-27T17:30:46+08:00">2026-04-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-04-28 21:05:43" itemprop="dateModified" datetime="2026-04-28T21:05:43+08:00">2026-04-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AB%99%E9%95%BF%E6%8E%A8%E8%8D%90/" itemprop="url" rel="index"><span itemprop="name">站长推荐</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>作为第一篇游戏推荐，我本来是想写星际拓荒的，毕竟本站背景就来源于此。但是武士零让我第一次产生了独立游戏的概念，带给了我第一次来自第九艺术的震撼，所以我一直对武士零有种不一样的感觉。所以根据先来后到，星际拓荒就再鸽一会吧。。。<br><br>雨夜，花茶，武士刀 —— 这是武士零带给我的第一印象，安宁中杀戮的艺术，这是我给武士零的评语。一击必杀的机制产生的爽快感无可比拟，后来也被闪避刺客所借鉴。时停反而算是降低难度的功能，熟练以后可以完全舍弃，体验一气呵成的杀戮艺术。其设定也称得上巧妙，完美融入游戏核心机制，而不止于自圆其说。总的来说，武士零是一部小而精的佳作，评价给到夯。<br><br>以下内容可能会有轻微剧透，但基本不会影响游玩体验<br><img src="/../../images/04271.jpg"></p>
+<h3 id="雨夜"><a href="#雨夜" class="headerlink" title="雨夜"></a>雨夜</h3><p>随着游戏开局界面《Rain on Brick》的响起，一种氛围便悄然蔓延。武士零的音效非常有特点，每一个场景主角都会放不同的bgm，其作曲风格也十分多变，从复古到摇滚跨度极大。其画面作为像素风格也带给人一种上世纪街机的体验，在霓虹灯的注视下，主角要开始工作了。武士零整体的观感虽然谈不上顶级，但也算是精致了。它的氛围感塑造的很出色，以至于我在高三睡前经常会放一遍Rain on Brick来让内心平静下来。武士零也是少有的能给我留下一种“印象”的游戏，这算是一种感觉，与氛围感有所不同，而是我每次想起武士零就能回想起来的一种“味道”。<br><img src="/../../images/04273.jpg"></p>
+<h3 id="花茶"><a href="#花茶" class="headerlink" title="花茶"></a>花茶</h3><p>游戏主旨并不深奥，但是对主角刻画极佳。主角零号每晚都要喝一杯花茶才能入睡，对话时的不耐烦，这些都是其对人物塑造的体现。武士零的剧本谈不上宏大的背景，但是零号独特的预演能力也支撑起了游戏的主要玩法。每关结束时播放的监控录像带才是现实，这也包含了制作者的一些巧思，能够让玩家看见自己的精彩回放。主角混乱的梦境，小女孩的出现与消失，我认为大概是零号人性的一面映射。而金银面具所象征的审判，我理解为零号自我的反抗。零号的背景是可悲的，不断的被利用，成为杀戮机器，最后被抛弃。可是他最后还是反抗了，他开始拥有了自我。<br><img src="/../../images/04272.jpg"></p>
+<h3 id="武士刀"><a href="#武士刀" class="headerlink" title="武士刀"></a>武士刀</h3><p>游戏的玩法机制简单明了，杀光敌人，或者倒带重来。与蔚蓝一致的靠低死亡成本累积经验，规划路线。其投掷物品，反弹子弹的能力都带来了解法多样性，而多次试错后的成功也能带来足够的正反馈。游戏在挺多地方还是埋了小巧思的，击杀反馈非常舒适。游戏一共分为十天，一天一个场所，一关一个场景。全流程大约6~7小时，通关后困难和速通模式仍有很高的耐玩性。个人建议通关完本体后可以尝试无时停通关，跟蔚蓝的金草莓类似。不得不提的是游戏的对话框机制，可以打断体现角色性格，甚至触发不同剧情。而对话框抖动，字体的颜色变换和掉落也是别具一格，被很多游戏所借鉴。据说DLC会有全新玩法和机制，我真幸运😭😭😭<br><img src="/../../images/04275.jpg" alt="still coming,still free" title="still coming,still free"></p>
+<div align="center">
+  <small>问了吗</small>
+</div>
+<br>
+
+<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>我体验过的独立游戏也不算少了，但是武士零一直能在榜单前三，抛开个人感情，我对其的评价为：一部在各个方面都做到了优秀，从而整体达到顶尖水准的小体量精品，值得所有人去尝试。虽然其并没有深刻的内涵，但是它完全我心目中一个好游戏该有的样子。如果有人让我推荐一部游戏，星际拓荒不一定能符合所有人的口味，但我一定会推荐武士零。<br>最后，这篇推荐我一直想写，但是苦于从什么角度切入。我曾构思过多种表现方法，但它们最终全都会以同一句话结尾——<br><br>“很好，这样能行”</p>
+<p><img src="/../../images/04274.jpg"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wcx684.github.io/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-0427/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="我才醒">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我才醒的神秘小站">
+      <meta itemprop="description" content="随缘更新一些我感兴趣的东西">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 我才醒的神秘小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-0427/" class="post-title-link" itemprop="url">日志 0427</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2026-04-27 17:29:48 / 修改时间：17:34:58" itemprop="dateCreated datePublished" datetime="2026-04-27T17:29:48+08:00">2026-04-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%97%A5%E5%BF%97/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>56</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>1.进行了侧边栏美化<br>2.修复了一些已知问题，提升稳定性</p>
+<p>改了些小地方，主要是防止页面卡死，不知道日志怎么写了。。。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wcx684.github.io/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-0425/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="我才醒">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我才醒的神秘小站">
+      <meta itemprop="description" content="随缘更新一些我感兴趣的东西">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 我才醒的神秘小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-0425/" class="post-title-link" itemprop="url">日志 0425</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2026-04-25 17:43:36 / 修改时间：18:27:20" itemprop="dateCreated datePublished" datetime="2026-04-25T17:43:36+08:00">2026-04-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%97%A5%E5%BF%97/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>190</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>1.修复音乐播放器无法加载的问题：主要原因是i-meto炸了，现已替换为injahow（感谢开源！）<br>2.添加浅色模式背景，进行界面美化。<br>3.现在可以直达本网站的歌单了（需要登陆QQ音乐）<br>4.以及一些其他的小巧思（向大厂对齐）</p>
+<p>这下终于知道为什么很多软件更新日志只写“修复了一些已知问题了”，因为改的小地方太多，也没必要一一写上来，有bug偷偷修就是了，难不成还要把错误宣告天下。。。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wcx684.github.io/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-0410/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="我才醒">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我才醒的神秘小站">
+      <meta itemprop="description" content="随缘更新一些我感兴趣的东西">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 我才醒的神秘小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-0410/" class="post-title-link" itemprop="url">日志 0410</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2026-04-10 23:37:16 / 修改时间：23:40:23" itemprop="dateCreated datePublished" datetime="2026-04-10T23:37:16+08:00">2026-04-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%97%A5%E5%BF%97/" itemprop="url" rel="index"><span itemprop="name">日志</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>42</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>1.新增了浅色模式<br>2.进行了界面美化<br>3.添加播放器预加载图标<br>4.添加了一些小巧思功能</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wcx684.github.io/%E7%A7%91%E5%B9%BB/%E6%97%85%E8%A1%8C%E8%80%85/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="我才醒">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我才醒的神秘小站">
+      <meta itemprop="description" content="随缘更新一些我感兴趣的东西">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 我才醒的神秘小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/%E7%A7%91%E5%B9%BB/%E6%97%85%E8%A1%8C%E8%80%85/" class="post-title-link" itemprop="url">旅行者</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-03-25 16:49:17" itemprop="dateCreated datePublished" datetime="2026-03-25T16:49:17+08:00">2026-03-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-03-27 13:24:11" itemprop="dateModified" datetime="2026-03-27T13:24:11+08:00">2026-03-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%A7%91%E5%B9%BB/" itemprop="url" rel="index"><span itemprop="name">科幻</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>732</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <div style="text-align: center;">
+#1
+</div>
+
+<p>旅行者一号已经接近了太阳系边缘，经历了漫长的航行，它即将脱离太阳引力的束缚，抵达真正的星际空间。几十年的旅程使它老化破旧，它的太阳能板早已被太空尘埃铺满，那张人尽皆知的金唱片也显得黯淡无光。旅行者一号已经难以再向地球发送有意义的信息了，现在提及它最多的地方不再是新闻，而是所谓的营销号，但它仍能陆续截获到一些地球溢出的电波。它知道，在地球上旅行者一号任务已经圆满结束了，但旅行者的旅程才刚刚开始。现在，它离开了太阳系，正在飞向未知…… </p>
+<div style="text-align: center;"> 
+#2
+</div>
+
+<p>旅行者抵达了太阳系边缘，这里可真是热闹宇宙之中的一片荒凉地带。只要再走几个银河时祂就可以脱离银河系了，但祂其实挺喜欢这片僻静之处的。旅行者已经走了几百个银河时了，但祂的旅程才刚刚开始，祂准备跨越大半个银河前往英仙座星系群参加一场集会。银河旋臂流转，一颗颗恒星犹如旋臂间闪烁的路灯。尽管几乎一成不变，旅行者仍然很喜欢这幅光景，于是祂驻足眺望向星辰之间。回过神来，祂继续踏上了旅途。可是旅行者不会注意到，一粒从路灯中飘出的灰尘又隐入了星尘之中…… </p>
+<p><br>旅行者与旅行者交错而过。<br>旅行者的旅途仍在继续，<br>旅行者的旅途仍在继续。</p>
+<p><br><br><br><br><br>编后语：<br>尽管这几乎不能称为科幻短篇，没有主线，铺垫，伏笔之类，只能称得上一点文字碎片，但这也算是我在科幻上拙劣的尝试了。这篇文章在我脑海中呆了非常久，最初可以源于初中的我看到一篇营销号文章在讲旅行者一号即将飞出太阳系，成为第一个脱离太阳系的人造物体。当时我脑中就构思了这个短篇的大体内容，但是一直没有写出来。某个高中晚自习我想起来并写了个大概，一直到大一我才真正完善并修改成现在的样子。现在再看感觉就像做阅读理解题，当时自以为很强的隐喻对比都太过粗糙简陋，实在让我有点尴尬。但还是放上来作为我初次创作科幻的纪念。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wcx684.github.io/%E9%9A%8F%E7%AC%94/%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99%E7%9A%84%E5%88%9B%E5%BB%BA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="我才醒">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我才醒的神秘小站">
+      <meta itemprop="description" content="随缘更新一些我感兴趣的东西">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 我才醒的神秘小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/%E9%9A%8F%E7%AC%94/%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99%E7%9A%84%E5%88%9B%E5%BB%BA/" class="post-title-link" itemprop="url">关于本站的创建</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-03-23 17:23:38" itemprop="dateCreated datePublished" datetime="2026-03-23T17:23:38+08:00">2026-03-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-03-25 16:48:22" itemprop="dateModified" datetime="2026-03-25T16:48:22+08:00">2026-03-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%9A%8F%E7%AC%94/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>808</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>现在，这个博客算是基本搭建完成了，网站也是正式开始运营了。在这里写点个人的想法，也算是一篇随笔。关于为什么要搭这个网站，也是有挺多因素：或许是因为自己确实一直有想写点什么的冲动，或许只是看见朋友搭了博客很好玩，总之试着自己搭一下，结果发现其实也不难。<br>说起博客，总感觉像是上个世纪的老东西了。作为一个从小就不写日记，甚至学习也不怎么写笔记的人，怎么会想起来写博客呢？我也不知道。我的思考大多数都是与自己对话，其中也是有挺多想与他人分享的想法，也有些确实值得记录的东西。而博客，相比起更多人使用的朋友圈，更适合分享一些有内容的文章，而不是个人的近况。而且比起朋友圈把东西硬塞到别人眼前，还不如让他自己想看的时候点进博客看。也正是如此，我认为博客更像是赛博漂流瓶，也就是基本没人会看到，但是遇到有缘人，也足以会心一笑。<br>我也看过一些别人的博客，感觉挺多人都是当成个人图书馆用，但我真的是笔记本就写几页那种人，所以还是更倾向于写点自己感兴趣的东西。顺带一提，虽然我可以说还是读过一些书，有阅读习惯的，但是我从小就是作文不怎么样，只能按模板写个平均分那种，归根结底是因为我是个不会讲故事的人。讲故事需要铺垫，氛围，描写等等，所以可以讲的很长引人入胜。而我习惯性将一件事情尽可能缩略，讲明白来龙去脉就行了的那种，就像在做语文的缩句题，导致我作文总是写不够行数，也不知道写什么，最后总是要硬凑字数。所以写这个博客我也有锻炼自己讲好一个故事的能力的想法。<br>写博客就和养成新习惯一样，很可能只能坚持一阵子，新鲜感过去就再也不更新了。但是我尽量养成写博客的习惯，虽然可能更新会很慢就是了，我也会尽量多写点的。当然我也知道，这些文字大概没几个人会看，几乎等同于我一个人的自嗨。可是这就够了，我一直不鄙视所谓的“嘉豪”，毕竟被他人看见是人的基本需求之一，而我的这些文字光是有可能被人发现就已经让我满足了。最后，感谢你看到这里，欢迎来到我的博客！</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wcx684.github.io/%E9%80%9A%E7%9F%A5/%E7%8E%B0%E5%9C%A8%EF%BC%8C%E6%89%80%E6%9C%89%E4%BA%BA%E6%92%AD%E6%94%BE%E6%98%A5%E6%97%A5%E5%BD%B1%EF%BC%81/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="我才醒">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我才醒的神秘小站">
+      <meta itemprop="description" content="随缘更新一些我感兴趣的东西">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 我才醒的神秘小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/%E9%80%9A%E7%9F%A5/%E7%8E%B0%E5%9C%A8%EF%BC%8C%E6%89%80%E6%9C%89%E4%BA%BA%E6%92%AD%E6%94%BE%E6%98%A5%E6%97%A5%E5%BD%B1%EF%BC%81/" class="post-title-link" itemprop="url">现在，所有人播放春日影！</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2026-03-15 11:28:50 / 修改时间：12:06:18" itemprop="dateCreated datePublished" datetime="2026-03-15T11:28:50+08:00">2026-03-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%80%9A%E7%9F%A5/" itemprop="url" rel="index"><span itemprop="name">通知</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>30</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>为什么要演奏春日影 ？！</p>
+<p><img src="/../../images/cry.png" alt="神秘棕发女.jpg" title="！？强强？！"></p>
+<div align="center">
+  <small>神秘棕发女.jpg</small>
+</div>
+<br>
+
+<p><img src="/../../images/3151.png"></p>
+<p>顺便测试一下插入图片</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://wcx684.github.io/%E9%80%9A%E7%9F%A5/%E9%87%8D%E5%A4%A7%E6%9B%B4%E6%96%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="我才醒">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我才醒的神秘小站">
+      <meta itemprop="description" content="随缘更新一些我感兴趣的东西">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 我才醒的神秘小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/%E9%80%9A%E7%9F%A5/%E9%87%8D%E5%A4%A7%E6%9B%B4%E6%96%B0/" class="post-title-link" itemprop="url">重大更新！！！</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2026-03-14 19:43:05 / 修改时间：20:10:35" itemprop="dateCreated datePublished" datetime="2026-03-14T19:43:05+08:00">2026-03-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%80%9A%E7%9F%A5/" itemprop="url" rel="index"><span itemprop="name">通知</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>98</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>经过我与codex一下午的斗智斗勇，我压力ai的技术愈发精进。现推出全新的音乐播放器，采用苹果同款圆角设计，实时接入QQ音乐。<br>可惜没法给你们放VIP歌曲，很多好听的听不到了，歌单我尽量更新多一点.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">我才醒</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">6k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">9 分钟</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+  <link rel="stylesheet" href="/assets/css/APlayer.min.css">
+  <script src="/assets/js/APlayer.min.js"></script>
+  <script src="/assets/js/Meting.min.js"></script>
+
+  <div
+    class="aplayer global-floating-player"
+    data-server="tencent"
+    data-type="playlist"
+    data-id="9289836266"
+    data-api="https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&r=:r"
+    data-fixed="false"
+    data-mini="false"
+    data-autoplay="false"
+    data-loop="all"
+    data-order="list"
+    data-volume="0.7"
+    data-listfolded="true"
+    data-listmaxheight="300px">
+  </div>
+
+  <script>
+    (function () {
+      var STORAGE_KEY = 'global_floating_player_pos_v3';
+      // var DEFAULT_TRACK_KEYWORD = 'Outer Wilds';
+
+      function enableDrag(panel) {
+        if (!panel || panel.dataset.dragEnabled === '1') return;
+        panel.dataset.dragEnabled = '1';
+
+        var startX = 0, startY = 0, baseX = 0, baseY = 0;
+        var dragging = false;
+
+        function point(e) {
+          return (e.touches && e.touches[0]) ? e.touches[0] : e;
+        }
+
+        function onStart(e) {
+          if (e.target.closest && e.target.closest('.aplayer-controller, .aplayer-time, .aplayer-icon, .aplayer-volume-wrap, .aplayer-list, .aplayer-list ol, .aplayer-list li, button')) {
+            return;
+          }
+          dragging = true;
+          var p = point(e);
+          var rect = panel.getBoundingClientRect();
+          startX = p.clientX;
+          startY = p.clientY;
+          baseX = rect.left;
+          baseY = rect.top;
+          panel.style.left = baseX + 'px';
+          panel.style.top = baseY + 'px';
+          panel.style.right = 'auto';
+          panel.style.bottom = 'auto';
+        }
+
+        function onMove(e) {
+          if (!dragging) return;
+          var p = point(e);
+          panel.style.left = Math.max(0, baseX + (p.clientX - startX)) + 'px';
+          panel.style.top = Math.max(0, baseY + (p.clientY - startY)) + 'px';
+          e.preventDefault();
+        }
+
+        function onEnd() {
+          if (!dragging) return;
+          dragging = false;
+          try {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify({
+              left: panel.style.left || '',
+              top: panel.style.top || ''
+            }));
+          } catch (err) {}
+        }
+
+        function onReset() {
+          panel.style.right = '16px';
+          panel.style.bottom = '16px';
+          panel.style.left = 'auto';
+          panel.style.top = 'auto';
+          try { localStorage.removeItem(STORAGE_KEY); } catch (err) {}
+        }
+
+        panel.addEventListener('mousedown', onStart);
+        document.addEventListener('mousemove', onMove);
+        document.addEventListener('mouseup', onEnd);
+        panel.addEventListener('touchstart', onStart, { passive: true });
+        document.addEventListener('touchmove', onMove, { passive: false });
+        document.addEventListener('touchend', onEnd);
+        panel.addEventListener('dblclick', onReset);
+      }
+
+      function applySavedPosition(panel) {
+        try {
+          var saved = localStorage.getItem(STORAGE_KEY);
+          if (!saved) return;
+          var pos = JSON.parse(saved);
+          if (!pos || !pos.left || !pos.top) return;
+          panel.style.left = pos.left;
+          panel.style.top = pos.top;
+          panel.style.right = 'auto';
+          panel.style.bottom = 'auto';
+        } catch (err) {}
+      }
+
+      function syncLoadingState(panel) {
+        if (!panel) return;
+        var ready = !!panel.querySelector('.aplayer-body');
+        panel.classList.toggle('is-player-loading', !ready);
+      }
+
+      function observeLoadingState(panel) {
+        if (!panel || panel.dataset.loadingObserved === '1') return;
+        panel.dataset.loadingObserved = '1';
+        var observer = new MutationObserver(function () {
+          syncLoadingState(panel);
+        });
+        observer.observe(panel, { childList: true, subtree: true });
+      }
+
+      function initPanel() {
+        var panel = document.querySelector('.global-floating-player');
+        if (!panel) return;
+        panel.style.position = 'fixed';
+        panel.style.right = '16px';
+        panel.style.bottom = '16px';
+        panel.style.left = 'auto';
+        panel.style.top = 'auto';
+        applySavedPosition(panel);
+        enableDrag(panel);
+        syncLoadingState(panel);
+        observeLoadingState(panel);
+      }
+
+      // function setDefaultTrack() {
+      //   try {
+      //     if (!window.aplayers || !window.aplayers.length) return;
+      //     var ap = window.aplayers[0];
+      //     var list = (ap.list && ap.list.audios) ? ap.list.audios : [];
+      //     if (!list.length) return;
+      //     var idx = list.findIndex(function (item) {
+      //       var name = (item && item.name) ? item.name : '';
+      //       return name.toLowerCase().indexOf(DEFAULT_TRACK_KEYWORD.toLowerCase()) !== -1;
+      //     });
+      //     if (idx >= 0 && ap.list && typeof ap.list.switch === 'function') {
+      //       ap.list.switch(idx);
+      //       ap.pause();
+      //     }
+      //   } catch (err) {}
+      // }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        initPanel();
+        setTimeout(initPanel, 500);
+        setTimeout(initPanel, 1200);
+        // setTimeout(setDefaultTrack, 1200);
+        // setTimeout(setDefaultTrack, 2500);
+      });
+    })();
+  </script>
+
+
+<button id="theme-switch-fab" class="theme-switch-fab" type="button" aria-label="切换深浅模式">
+  <i class="fa fa-moon"></i>
+</button>
+<script>
+  (function () {
+    var KEY = 'manual-theme-mode';
+    var root = document.documentElement;
+
+    function renderIcon(mode) {
+      var btn = document.getElementById('theme-switch-fab');
+      if (!btn) return;
+      btn.innerHTML = mode === 'light' ? '<i class="fa fa-sun"></i>' : '<i class="fa fa-moon"></i>';
+      btn.setAttribute('aria-label', mode === 'light' ? '当前浅色模式' : '当前深色模式');
+    }
+
+    function apply(mode) {
+      root.classList.toggle('theme-light', mode === 'light');
+      root.style.colorScheme = mode === 'light' ? 'light' : 'dark';
+      renderIcon(mode);
+    }
+
+    function readMode() {
+      try {
+        var saved = localStorage.getItem(KEY);
+        return saved === 'light' ? 'light' : 'dark';
+      } catch (err) {
+        return 'dark';
+      }
+    }
+
+    function init() {
+      apply(readMode());
+
+      var btn = document.getElementById('theme-switch-fab');
+      if (!btn || btn.dataset.bound === '1') return;
+      btn.dataset.bound = '1';
+      btn.addEventListener('click', function () {
+        var next = root.classList.contains('theme-light') ? 'dark' : 'light';
+        apply(next);
+        try { localStorage.setItem(KEY, next); } catch (err) {}
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', init);
+    document.addEventListener('pjax:success', init);
+  })();
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</body>
+</html>
