@@ -2,21 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://wcx684.github.io/</loc>
-    <lastmod>2026-10-31T15:07:35.234Z</lastmod>
+    <lastmod>2026-11-01T05:45:59.105Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://wcx684.github.io/archives/</loc>
-    <lastmod>2026-10-31T15:07:35.234Z</lastmod>
+    <lastmod>2026-11-01T05:45:59.105Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://wcx684.github.io/categories/</loc>
-    <lastmod>2026-10-31T15:07:35.234Z</lastmod>
+    <lastmod>2026-11-01T05:45:59.105Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wcx684.github.io/%E7%A7%91%E5%B9%BB/%E3%80%8A%E6%98%9F%E9%99%85%E6%8B%93%E8%8D%92%E3%80%8B/</loc>
+    <lastmod>2026-11-01T05:43:27.191Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://wcx684.github.io/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-1031/</loc>
