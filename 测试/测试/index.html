@@ -75,6 +75,17 @@
 <meta name="robots" content="noindex, nofollow">
 
 
+<script>
+  (function () {
+    try {
+      var mode = localStorage.getItem('manual-theme-mode') === 'light' ? 'light' : 'dark';
+      if (mode === 'light') document.documentElement.classList.add('theme-light');
+      document.documentElement.style.colorScheme = mode;
+    } catch (err) {}
+  })();
+</script>
+
+<link rel="preload" as="image" href="/images/bg.jpg">
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
@@ -114,8 +125,48 @@
 
 <nav class="site-nav">
   <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-blogroll">
+        <a class="menu-link blogroll-trigger" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false"><i class="fa fa-globe fa-fw" aria-hidden="true"></i>友情链接<i class="fa fa-angle-down blogroll-caret" aria-hidden="true"></i>
+        </a>
+        <ul class="blogroll-menu">
+            <li><a href="https://imicola.com" target="_blank" rel="noopener">imicola的猫窝</a></li>
+            <li><a href="https://alisa22580.pages.dev/" target="_blank" rel="noopener">Alisa 的小站</a></li>
+        </ul>
+      </li>
   </ul>
 </nav>
+
+<script data-pjax>
+  (function () {
+    var item = document.querySelector('.menu-item-blogroll');
+    if (!item) return;
+    var trigger = item.querySelector('.blogroll-trigger');
+    if (!trigger || trigger.dataset.blogrollBound === '1') return;
+    trigger.dataset.blogrollBound = '1';
+
+    function setOpen(open) {
+      item.classList.toggle('is-open', open);
+      trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+
+    trigger.addEventListener('click', function (event) {
+      event.preventDefault();
+      setOpen(!item.classList.contains('is-open'));
+    });
+    trigger.addEventListener('keydown', function (event) {
+      if (event.key === 'Enter' || event.key === ' ' || event.key === 'ArrowDown') {
+        event.preventDefault();
+        setOpen(true);
+      }
+    });
+    document.addEventListener('click', function (event) {
+      if (!item.contains(event.target)) setOpen(false);
+    });
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') setOpen(false);
+    });
+  })();
+</script>
 
 
 
@@ -156,7 +207,7 @@
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
           <span class="site-state-item-count">21</span>
-          <span class="site-state-item-name">日志</span>
+          <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
@@ -174,23 +225,18 @@
           </a>
           <ul class="sidebar-cat-posts" style="display: none;">
               <li>
-                <a href="/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-0313/">
-                  日志 0313
-                </a>
-              </li>
-              <li>
                 <a href="/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-0309/">
                   日志 0309
                 </a>
               </li>
               <li>
-                <a href="/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-0314/">
-                  日志 0314
+                <a href="/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-0313/">
+                  日志 0313
                 </a>
               </li>
               <li>
-                <a href="/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-0427/">
-                  日志 0427
+                <a href="/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-0314/">
+                  日志 0314
                 </a>
               </li>
               <li>
@@ -201,6 +247,11 @@
               <li>
                 <a href="/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-0425/">
                   日志 0425
+                </a>
+              </li>
+              <li>
+                <a href="/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-0427/">
+                  日志 0427
                 </a>
               </li>
               <li>
@@ -233,13 +284,45 @@
           </a>
           <ul class="sidebar-cat-posts" style="display: none;">
               <li>
+                <a href="/%E7%A7%91%E5%B9%BB/%E6%97%85%E8%A1%8C%E8%80%85/">
+                  旅行者
+                </a>
+              </li>
+              <li>
                 <a href="/%E7%A7%91%E5%B9%BB/%E3%80%8A%E6%98%9F%E9%99%85%E6%8B%93%E8%8D%92%E3%80%8B/">
                   《星际拓荒》
                 </a>
               </li>
+          </ul>
+        </li>
+        <li class="sidebar-cat">
+          <a href="/categories/%E9%80%9A%E7%9F%A5/" class="sidebar-cat-toggle">
+            通知 (5)
+          </a>
+          <ul class="sidebar-cat-posts" style="display: none;">
               <li>
-                <a href="/%E7%A7%91%E5%B9%BB/%E6%97%85%E8%A1%8C%E8%80%85/">
-                  旅行者
+                <a href="/%E9%80%9A%E7%9F%A5/%E7%8E%B0%E5%9C%A8%EF%BC%8C%E6%89%80%E6%9C%89%E4%BA%BA%E6%92%AD%E6%94%BE%E6%98%A5%E6%97%A5%E5%BD%B1%EF%BC%81/">
+                  现在，所有人播放春日影！
+                </a>
+              </li>
+              <li>
+                <a href="/%E9%80%9A%E7%9F%A5/%E9%80%9A%E7%9F%A5/">
+                  通知
+                </a>
+              </li>
+              <li>
+                <a href="/%E9%80%9A%E7%9F%A5/%E9%83%BD%E7%BB%99%E6%88%91%E5%8E%BB%E7%8E%A9%E6%9D%80%E6%88%AE%E5%B0%96%E5%A1%942%EF%BC%81%EF%BC%81%EF%BC%81/">
+                  都给我去玩杀戮尖塔2！！！
+                </a>
+              </li>
+              <li>
+                <a href="/%E9%80%9A%E7%9F%A5/%E9%87%8D%E8%A6%81%E9%80%9A%E7%9F%A5/">
+                  重要通知
+                </a>
+              </li>
+              <li>
+                <a href="/%E9%80%9A%E7%9F%A5/%E9%87%8D%E5%A4%A7%E6%9B%B4%E6%96%B0/">
+                  重大更新！！！
                 </a>
               </li>
           </ul>
@@ -262,38 +345,6 @@
           </ul>
         </li>
         <li class="sidebar-cat">
-          <a href="/categories/%E9%80%9A%E7%9F%A5/" class="sidebar-cat-toggle">
-            通知 (5)
-          </a>
-          <ul class="sidebar-cat-posts" style="display: none;">
-              <li>
-                <a href="/%E9%80%9A%E7%9F%A5/%E7%8E%B0%E5%9C%A8%EF%BC%8C%E6%89%80%E6%9C%89%E4%BA%BA%E6%92%AD%E6%94%BE%E6%98%A5%E6%97%A5%E5%BD%B1%EF%BC%81/">
-                  现在，所有人播放春日影！
-                </a>
-              </li>
-              <li>
-                <a href="/%E9%80%9A%E7%9F%A5/%E9%87%8D%E5%A4%A7%E6%9B%B4%E6%96%B0/">
-                  重大更新！！！
-                </a>
-              </li>
-              <li>
-                <a href="/%E9%80%9A%E7%9F%A5/%E9%87%8D%E8%A6%81%E9%80%9A%E7%9F%A5/">
-                  重要通知
-                </a>
-              </li>
-              <li>
-                <a href="/%E9%80%9A%E7%9F%A5/%E9%83%BD%E7%BB%99%E6%88%91%E5%8E%BB%E7%8E%A9%E6%9D%80%E6%88%AE%E5%B0%96%E5%A1%942%EF%BC%81%EF%BC%81%EF%BC%81/">
-                  都给我去玩杀戮尖塔2！！！
-                </a>
-              </li>
-              <li>
-                <a href="/%E9%80%9A%E7%9F%A5/%E9%80%9A%E7%9F%A5/">
-                  通知
-                </a>
-              </li>
-          </ul>
-        </li>
-        <li class="sidebar-cat">
           <a href="/categories/%E9%9A%8F%E7%AC%94/" class="sidebar-cat-toggle">
             随笔 (3)
           </a>
@@ -304,13 +355,13 @@
                 </a>
               </li>
               <li>
-                <a href="/%E9%9A%8F%E7%AC%94/%E9%9A%8F%E4%BE%BF%E5%86%99%E7%82%B9/">
-                  随便写点
+                <a href="/%E9%9A%8F%E7%AC%94/%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99%E7%9A%84%E5%88%9B%E5%BB%BA/">
+                  关于本站的创建
                 </a>
               </li>
               <li>
-                <a href="/%E9%9A%8F%E7%AC%94/%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99%E7%9A%84%E5%88%9B%E5%BB%BA/">
-                  关于本站的创建
+                <a href="/%E9%9A%8F%E7%AC%94/%E9%9A%8F%E4%BE%BF%E5%86%99%E7%82%B9/">
+                  随便写点
                 </a>
               </li>
           </ul>
@@ -323,21 +374,6 @@
     </div>
 
     
-    <div class="sidebar-inner sidebar-blogroll">
-      <div class="links-of-blogroll animated">
-        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
-          友情链接
-        </div>
-        <ul class="links-of-blogroll-list">
-            <li class="links-of-blogroll-item">
-              <a href="https://imicola.com/" title="https:&#x2F;&#x2F;imicola.com" rel="noopener" target="_blank">imicola的猫窝</a>
-            </li>
-            <li class="links-of-blogroll-item">
-              <a href="https://alisa22580.pages.dev/" title="https:&#x2F;&#x2F;alisa22580.pages.dev&#x2F;" rel="noopener" target="_blank">Alisa 的小站</a>
-            </li>
-        </ul>
-      </div>
-    </div>
   </aside>
 
 
@@ -502,26 +538,10 @@
   <div class="copyright">
     &copy; 
     <span itemprop="copyrightYear">2026</span>
-    <span class="with-love">
-      <i class="fa fa-heart"></i>
-    </span>
+    <span class="with-love">by</span>
     <span class="author" itemprop="copyrightHolder">我才醒</span>
   </div>
-<div class="wordcount">
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <i class="fa fa-chart-line"></i>
-    </span>
-    <span title="站点总字数">6k</span>
-  </span>
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <i class="fa fa-coffee"></i>
-    </span>
-    <span title="站点阅读时长">10 分钟</span>
-  </span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 驱动
   </div>
 
     </div>
@@ -543,160 +563,246 @@
   <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
 </noscript>
 
+
   <link rel="stylesheet" href="/assets/css/APlayer.min.css">
   <script src="/assets/js/APlayer.min.js"></script>
   <script src="/assets/js/Meting.min.js"></script>
 
-  <div
-    class="aplayer global-floating-player"
-    data-server="tencent"
-    data-type="playlist"
-    data-id="9289836266"
-    data-api="https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&r=:r"
-    data-fixed="false"
-    data-mini="false"
-    data-autoplay="false"
-    data-loop="all"
-    data-order="list"
-    data-volume="0.7"
-    data-listfolded="true"
-    data-listmaxheight="300px">
+  <div class="music-dock" id="music-dock">
+    <button class="music-fab" id="music-fab" type="button" aria-label="展开音乐播放器" aria-expanded="false" aria-controls="music-panel">
+      <i class="fa fa-music" aria-hidden="true"></i>
+    </button>
+
+    <div
+      id="music-panel"
+      class="aplayer global-floating-player"
+      data-server="tencent"
+      data-type="playlist"
+      data-id="9289836266"
+      data-api="https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&r=:r"
+      data-fixed="false"
+      data-mini="false"
+      data-autoplay="false"
+      data-loop="all"
+      data-order="list"
+      data-volume="0.7"
+      data-listfolded="true"
+      data-listmaxheight="300px">
+    </div>
+
+    
+    <a class="music-fallback" href="https://y.qq.com/n/ryqq/playlist/9289836266" target="_blank" rel="noopener">
+      <i class="fa fa-music" aria-hidden="true"></i>
+      <span>音乐源暂时不可用<br>点这里打开歌单</span>
+    </a>
   </div>
 
   <script>
     (function () {
-      var STORAGE_KEY = 'global_floating_player_pos_v3';
-      // var DEFAULT_TRACK_KEYWORD = 'Outer Wilds';
 
-      function enableDrag(panel) {
-        if (!panel || panel.dataset.dragEnabled === '1') return;
-        panel.dataset.dragEnabled = '1';
+      var dock = document.getElementById('music-dock');
+      var fab = document.getElementById('music-fab');
+      var panel = document.getElementById('music-panel');
+      if (!dock || !fab || !panel) return;
 
-        var startX = 0, startY = 0, baseX = 0, baseY = 0;
-        var dragging = false;
+      function isOpen() { return dock.classList.contains('is-open'); }
 
-        function point(e) {
-          return (e.touches && e.touches[0]) ? e.touches[0] : e;
+      /* ---------- position ---------- */
+      function clamp(left, top) {
+        var size = fab.offsetWidth || 44;
+        var maxLeft = Math.max(8, window.innerWidth - size - 8);
+        var maxTop = Math.max(8, window.innerHeight - size - 8);
+        return {
+          left: Math.min(Math.max(8, left), maxLeft),
+          top: Math.min(Math.max(8, top), maxTop)
+        };
+      }
+
+      function place(left, top) {
+        var p = clamp(left, top);
+        dock.style.left = p.left + 'px';
+        dock.style.top = p.top + 'px';
+        dock.style.right = 'auto';
+        dock.style.bottom = 'auto';
+      }
+
+      // keep the panel inside the viewport: it opens to the left of the ball,
+      // and flips to the right side when there is no room on the left
+      function fitPanel() {
+        dock.classList.remove('flip-side');
+        panel.style.marginLeft = '0px';
+        panel.style.marginTop = '0px';
+        if (!isOpen() || dock.classList.contains('is-unavailable')) return;
+
+        var rect = panel.getBoundingClientRect();
+        if (rect.left < 8) dock.classList.add('flip-side');
+
+        rect = panel.getBoundingClientRect();
+        var shiftX = 0;
+        if (rect.right > window.innerWidth - 8) shiftX = (window.innerWidth - 8) - rect.right;
+        if (rect.left + shiftX < 8) shiftX = 8 - rect.left;
+        panel.style.marginLeft = Math.round(shiftX) + 'px';
+
+        rect = panel.getBoundingClientRect();
+        var shiftY = 0;
+        if (rect.top < 8) shiftY = 8 - rect.top;
+        if (rect.bottom + shiftY > window.innerHeight - 8) shiftY = (window.innerHeight - 8) - rect.bottom;
+        panel.style.marginTop = Math.round(shiftY) + 'px';
+      }
+
+      function setOpen(open) {
+        dock.classList.toggle('is-open', open);
+        fab.setAttribute('aria-expanded', open ? 'true' : 'false');
+        fab.setAttribute('aria-label', open ? '收起音乐播放器' : '展开音乐播放器');
+        fab.innerHTML = open
+          ? '<i class="fa fa-angle-down" aria-hidden="true"></i>'
+          : '<i class="fa fa-music" aria-hidden="true"></i>';
+        // 只有用户点开时才暴露“音乐源不可用”，页面加载时不主动显示
+        dock.classList.remove('is-unavailable');
+        if (open) {
+          if (audioFailed) dock.classList.add('is-unavailable');
+          else fitPanel();
         }
+      }
 
-        function onStart(e) {
-          if (e.target.closest && e.target.closest('.aplayer-controller, .aplayer-time, .aplayer-icon, .aplayer-volume-wrap, .aplayer-list, .aplayer-list ol, .aplayer-list li, button')) {
-            return;
+      function toggle() { setOpen(!isOpen()); }
+
+      /* ---------- drag ---------- */
+      var dragging = false;
+      var moved = false;
+      var startX = 0;
+      var startY = 0;
+      var baseLeft = 0;
+      var baseTop = 0;
+
+      fab.addEventListener('pointerdown', function (event) {
+        if (event.pointerType === 'mouse' && event.button !== 0) return;
+        dragging = true;
+        moved = false;
+        startX = event.clientX;
+        startY = event.clientY;
+        var rect = dock.getBoundingClientRect();
+        baseLeft = rect.left;
+        baseTop = rect.top;
+        dock.classList.add('is-dragging');
+        try { fab.setPointerCapture(event.pointerId); } catch (err) {}
+      });
+
+      fab.addEventListener('pointermove', function (event) {
+        if (!dragging) return;
+        var dx = event.clientX - startX;
+        var dy = event.clientY - startY;
+        if (!moved && (Math.abs(dx) > 4 || Math.abs(dy) > 4)) moved = true;
+        if (!moved) return;
+        place(baseLeft + dx, baseTop + dy);
+      });
+
+      fab.addEventListener('pointerup', function () {
+        if (!dragging) return;
+        dragging = false;
+        dock.classList.remove('is-dragging');
+        if (moved) {
+          fitPanel();
+        } else {
+          toggle();
+        }
+      });
+
+      fab.addEventListener('pointercancel', function () {
+        dragging = false;
+        dock.classList.remove('is-dragging');
+      });
+
+      // double click puts the ball back to its default corner
+      fab.addEventListener('dblclick', function () {
+        dock.style.left = '';
+        dock.style.top = '';
+        dock.style.right = '';
+        dock.style.bottom = '';
+        fitPanel();
+      });
+
+
+      /* ---------- close on outside click / Esc ---------- */
+      document.addEventListener('click', function (event) {
+        if (!isOpen() || dock.contains(event.target)) return;
+        setOpen(false);
+      });
+
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && isOpen()) setOpen(false);
+      });
+
+      /* ---------- playing state (APlayer has no data attribute we can select) ---------- */
+      var playWatch = 0;
+      var audioFailed = false;
+      var audioErrors = 0;
+
+      function bindPlayingState() {
+        var players = window.aplayers || [];
+        for (var i = 0; i < players.length; i++) {
+          var ap = players[i];
+          if (!ap || !ap.container || !dock.contains(ap.container) || ap.__dockBound) continue;
+          ap.__dockBound = true;
+          var markPlaying = function () { dock.classList.add('is-playing'); };
+          var markPaused = function () { dock.classList.remove('is-playing'); };
+          if (ap.audio && ap.audio.addEventListener) {
+            ap.audio.addEventListener('play', markPlaying);
+            ap.audio.addEventListener('pause', markPaused);
+            ap.audio.addEventListener('ended', markPaused);
+            ap.audio.addEventListener('emptied', markPaused);
+            // 接口拿不到音频地址时（Meting 的 type=url 返回空），audio 会报 MEDIA_ELEMENT_ERROR，
+            // 这时收起播放器面板，换成“去歌单”的兜底卡片，避免一直报错
+            // 接口取不到音频地址时先只记状态，等用户点开小球再显示兜底卡片；
+            // APlayer 遇到坏音源会每 2 秒自动跳下一首，36 首会一直刷错，这里在第二次错误后直接销毁播放器
+            ap.audio.addEventListener('error', function () {
+              audioFailed = true;
+              audioErrors += 1;
+              dock.classList.remove('is-playing');
+              if (isOpen()) dock.classList.add('is-unavailable');
+              // 关掉 APlayer 的“2 秒后自动跳下一首”，否则 36 首会循环刷错误请求
+              if (audioErrors === 1) {
+                try { ap.pause(); } catch (err) {}
+                ap.skipForward = function () {};
+                try {
+                  ap.audio.removeAttribute('src');
+                  ap.audio.load();
+                } catch (err) {}
+              }
+            });
+            ap.audio.addEventListener('loadedmetadata', function () {
+              audioFailed = false;
+              dock.classList.remove('is-unavailable');
+            });
           }
-          dragging = true;
-          var p = point(e);
-          var rect = panel.getBoundingClientRect();
-          startX = p.clientX;
-          startY = p.clientY;
-          baseX = rect.left;
-          baseY = rect.top;
-          panel.style.left = baseX + 'px';
-          panel.style.top = baseY + 'px';
-          panel.style.right = 'auto';
-          panel.style.bottom = 'auto';
+          if (typeof ap.on === 'function') {
+            ap.on('play', markPlaying);
+            ap.on('pause', markPaused);
+            ap.on('ended', markPaused);
+            ap.on('listswitch', function () {
+              if (ap.audio && ap.audio.paused) markPaused();
+            });
+          }
         }
+      }
 
-        function onMove(e) {
-          if (!dragging) return;
-          var p = point(e);
-          panel.style.left = Math.max(0, baseX + (p.clientX - startX)) + 'px';
-          panel.style.top = Math.max(0, baseY + (p.clientY - startY)) + 'px';
-          e.preventDefault();
+      // Meting fetches the playlist asynchronously, so keep checking until the instance shows up
+      var watch = setInterval(function () {
+        bindPlayingState();
+        if (++playWatch > 60) clearInterval(watch);
+      }, 250);
+
+      function keepInView() {
+        if (dock.style.left && dock.style.top) {
+          place(parseFloat(dock.style.left), parseFloat(dock.style.top));
         }
-
-        function onEnd() {
-          if (!dragging) return;
-          dragging = false;
-          try {
-            localStorage.setItem(STORAGE_KEY, JSON.stringify({
-              left: panel.style.left || '',
-              top: panel.style.top || ''
-            }));
-          } catch (err) {}
-        }
-
-        function onReset() {
-          panel.style.right = '16px';
-          panel.style.bottom = '16px';
-          panel.style.left = 'auto';
-          panel.style.top = 'auto';
-          try { localStorage.removeItem(STORAGE_KEY); } catch (err) {}
-        }
-
-        panel.addEventListener('mousedown', onStart);
-        document.addEventListener('mousemove', onMove);
-        document.addEventListener('mouseup', onEnd);
-        panel.addEventListener('touchstart', onStart, { passive: true });
-        document.addEventListener('touchmove', onMove, { passive: false });
-        document.addEventListener('touchend', onEnd);
-        panel.addEventListener('dblclick', onReset);
+        fitPanel();
       }
 
-      function applySavedPosition(panel) {
-        try {
-          var saved = localStorage.getItem(STORAGE_KEY);
-          if (!saved) return;
-          var pos = JSON.parse(saved);
-          if (!pos || !pos.left || !pos.top) return;
-          panel.style.left = pos.left;
-          panel.style.top = pos.top;
-          panel.style.right = 'auto';
-          panel.style.bottom = 'auto';
-        } catch (err) {}
-      }
-
-      function syncLoadingState(panel) {
-        if (!panel) return;
-        var ready = !!panel.querySelector('.aplayer-body');
-        panel.classList.toggle('is-player-loading', !ready);
-      }
-
-      function observeLoadingState(panel) {
-        if (!panel || panel.dataset.loadingObserved === '1') return;
-        panel.dataset.loadingObserved = '1';
-        var observer = new MutationObserver(function () {
-          syncLoadingState(panel);
-        });
-        observer.observe(panel, { childList: true, subtree: true });
-      }
-
-      function initPanel() {
-        var panel = document.querySelector('.global-floating-player');
-        if (!panel) return;
-        panel.style.position = 'fixed';
-        panel.style.right = '16px';
-        panel.style.bottom = '16px';
-        panel.style.left = 'auto';
-        panel.style.top = 'auto';
-        applySavedPosition(panel);
-        enableDrag(panel);
-        syncLoadingState(panel);
-        observeLoadingState(panel);
-      }
-
-      // function setDefaultTrack() {
-      //   try {
-      //     if (!window.aplayers || !window.aplayers.length) return;
-      //     var ap = window.aplayers[0];
-      //     var list = (ap.list && ap.list.audios) ? ap.list.audios : [];
-      //     if (!list.length) return;
-      //     var idx = list.findIndex(function (item) {
-      //       var name = (item && item.name) ? item.name : '';
-      //       return name.toLowerCase().indexOf(DEFAULT_TRACK_KEYWORD.toLowerCase()) !== -1;
-      //     });
-      //     if (idx >= 0 && ap.list && typeof ap.list.switch === 'function') {
-      //       ap.list.switch(idx);
-      //       ap.pause();
-      //     }
-      //   } catch (err) {}
-      // }
-
-      document.addEventListener('DOMContentLoaded', function () {
-        initPanel();
-        setTimeout(initPanel, 500);
-        setTimeout(initPanel, 1200);
-        // setTimeout(setDefaultTrack, 1200);
-        // setTimeout(setDefaultTrack, 2500);
+      window.addEventListener('resize', keepInView, { passive: true });
+      document.addEventListener('pjax:success', function () {
+        setOpen(false);
+        fitPanel();
       });
     })();
   </script>

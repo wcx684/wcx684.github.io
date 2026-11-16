@@ -1385,7 +1385,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #597395;
+    background: #ffe971;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2910,7 +2910,8 @@ header.header {
     padding: 10px 12px;
   }
 }
-/* Background image + transparent content containers */
+/* Background image + transparent content containers
+   和线上版本保持一致：背景直接挂在 body 上（background-attachment: fixed） */
 body {
   background-image: url("/images/bg.jpg");
   background-attachment: fixed;
@@ -2919,13 +2920,10 @@ body {
   background-size: cover;
   background-color: #0f1115;
 }
+/* 浅色模式同样用这张图，不再单独用 2.jpg */
 html.theme-light body {
-  background-image: url("/images/2.jpg") !important;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #2e6fb5 !important;
+  background-image: url("/images/bg.jpg") !important;
+  background-color: #0f1115 !important;
 }
 /* Floating theme switch button (bottom-right) */
 .theme-switch-fab {
@@ -2977,7 +2975,7 @@ html.theme-light {
   color-scheme: light;
 }
 html.theme-light .site-brand-container {
-  background: #f3f6fb !important;
+  background: transparent !important;
 }
 /* Remove the top headband strip */
 .headband {
@@ -3006,6 +3004,24 @@ html.theme-light .site-brand-container {
 .sidebar-inner {
   border-radius: 14px;
   overflow: hidden;
+}
+/* ---------- 左侧栏半透明，和文章卡片同一套效果 ---------- */
+.header,
+.sidebar-inner {
+  background: rgba(120,120,120,0.18) !important;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1) !important;
+}
+.site-brand-container {
+  background: transparent !important;
+}
+html.theme-light .header,
+html.theme-light .sidebar-inner {
+  background: rgba(255,255,255,0.96) !important;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1) !important;
 }
 /* Sidebar category directory: tighter gap between bullet and title */
 .sidebar-categories-list > ul {
@@ -3133,21 +3149,92 @@ html.theme-light .main-inner.index .post-block {
   text-overflow: ellipsis;
   white-space: normal;
 }
-/* Global floating music player (clean layout) */
-.global-floating-player {
-  position: fixed !important;
+/* Music dock: a round button that expands into the player panel */
+.music-dock {
+  position: fixed;
   right: 16px;
-  bottom: 16px;
+  bottom: 132px;
+  z-index: 100000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.music-fab {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid rgba(130,150,175,0.45);
+  border-radius: 999px;
+  background: rgba(18,24,34,0.78);
+  color: #e7edf7;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.35);
+  transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.music-fab:hover {
+  background: rgba(127,184,255,0.22);
+  border-color: rgba(127,184,255,0.45);
+}
+.music-dock.is-open .music-fab {
+  background: rgba(127,184,255,0.24);
+  border-color: rgba(127,184,255,0.5);
+}
+/* playing state, toggled by the player's play/pause events */
+.music-dock.is-playing .music-fab {
+  border-color: rgba(127,184,255,0.55);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.35), 0 0 0 2px rgba(127,184,255,0.22);
+}
+.music-fab i {
+  display: inline-block;
+  line-height: 1;
+}
+/* the note keeps spinning while collapsed and playing; the open state shows a chevron */
+.music-dock:not(.is-open).is-playing .music-fab i {
+  animation: music-spin 3s linear infinite;
+}
+/* the panel sits beside the ball (to its left) and is only shown when open */
+.music-dock .aplayer.global-floating-player {
+  position: absolute !important;
+  right: calc(100% + 10px);
+  bottom: 0;
   left: auto;
-  z-index: 99999 !important;
+  top: auto;
+  z-index: 1 !important;
   width: 320px;
-  max-width: calc(100vw - 20px);
+  max-width: calc(100vw - 24px);
   margin: 0 !important;
   border-radius: 18px !important;
   overflow: hidden !important;
   box-shadow: 0 14px 34px rgba(0,0,0,0.45);
   background: rgba(18,24,34,0.9);
   border: 1px solid rgba(90,108,130,0.35);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateX(8px) scale(0.97);
+  transform-origin: bottom right;
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+}
+.music-dock.is-open .aplayer.global-floating-player {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: none;
+}
+/* no room on the left: open to the right of the ball instead */
+.music-dock.flip-side .aplayer.global-floating-player {
+  right: auto;
+  left: calc(100% + 10px);
+  transform-origin: bottom left;
 }
 .global-floating-player .aplayer-body {
   position: relative !important;
@@ -3252,11 +3339,557 @@ html.theme-light .main-inner.index .post-block {
   display: none !important;
 }
 @media (max-width: 767px) {
-  .global-floating-player {
+  .music-dock {
     right: 10px;
-    bottom: 10px;
-    width: calc(100vw - 20px);
-    max-width: calc(100vw - 20px);
+    bottom: 120px;
+  }
+  .music-dock .aplayer.global-floating-player {
+    width: calc(100vw - 24px);
+    max-width: calc(100vw - 24px);
+  }
+}
+/* ============================================================
+   Home hero: full-screen opening screen on the home page.
+   Markup lives in themes/next/layout/index.njk (.home-hero).
+
+   On the home page the whole layout switches to a single column:
+   a horizontal top bar (brand + menu) and the hero, no sidebar.
+   Post pages keep the original two-column layout.
+   ============================================================ */
+.home-hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+/* 背景交给 body 那张 fixed 图，这里再铺一层同样的图只会多一层重绘，刷新时容易闪 */
+  background: transparent;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+.home-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(4,8,16,0.72) 0%, rgba(4,8,16,0.42) 42%, rgba(4,8,16,0.12) 76%, rgba(4,8,16,0) 100%);
+  pointer-events: none;
+}
+/* 浅色模式和深色模式用同一张底图，所以开屏在两种模式下都显示 */
+/* ---------- home layout ---------- */
+body:has(.home-hero) {
+  --hero-bar: 74px;
+}
+/* ---------- 手机：单栏 + 顶部栏 ---------- */
+@media (max-width: 991px) {
+  body:has(.home-hero) .main {
+    width: 100% !important;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  body:has(.home-hero) .column {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100% !important;
+    margin: 0;
+    padding: 0;
+    transition: background 0.25s ease, box-shadow 0.25s ease;
+  }
+  body:has(.home-hero) .sidebar {
+    display: none !important;
+  }
+  body:has(.home-hero) .column.is-stuck {
+    background: rgba(14,19,28,0.82);
+    box-shadow: 0 1px 0 rgba(255,255,255,0.07), 0 10px 26px rgba(0,0,0,0.3);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+  body:has(.home-hero) .header {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    width: 100%;
+    margin: 0;
+    padding: 15px 40px;
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+  body:has(.home-hero) .site-brand-container {
+    width: auto;
+    flex: 0 0 auto;
+    padding: 0;
+    background: transparent !important;
+  }
+  body:has(.home-hero) .site-meta {
+    padding: 0;
+    text-align: left;
+  }
+  body:has(.home-hero) .site-title {
+    margin: 0;
+    font-size: 1.32em;
+    line-height: 1.25;
+  }
+  body:has(.home-hero) .site-subtitle {
+    display: none;
+  }
+  body:has(.home-hero) .site-nav {
+    margin: 0;
+  }
+  body:has(.home-hero) .main-menu {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+  }
+  body:has(.home-hero) .main-menu .menu-item {
+    margin: 0;
+    padding: 0;
+    background: transparent !important;
+  }
+  body:has(.home-hero) .main-menu .menu-item a {
+    background: transparent !important;
+  }
+  body:has(.home-hero) .main-menu .menu-item a {
+    padding: 4px 2px;
+  }
+  body:has(.home-hero) .main-menu .menu-item-active::after {
+    display: none;
+  }
+  body:has(.home-hero) .main-inner {
+    width: 100% !important;
+    max-width: 1040px;
+    margin: 0 auto;
+    padding-top: calc(100vh - var(--hero-bar) + 12px);
+  }
+  body:has(.home-hero) .header .site-title,
+  body:has(.home-hero) .header .main-menu > .menu-item > a,
+  body:has(.home-hero) .site-nav-toggle .toggle,
+  body:has(.home-hero) .site-nav-right .toggle {
+    color: rgba(240,246,255,0.94) !important;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.55);
+    transition: color 0.25s ease;
+  }
+  body:has(.home-hero) .header .main-menu > .menu-item > a:hover {
+    color: #fff !important;
+  }
+  body:has(.home-hero) .header .logo-line {
+    background: rgba(255,255,255,0.5) !important;
+  }
+}
+/* ---------- 桌面：首页和文章页同一套两栏，内容从开屏下方开始 ---------- */
+@media (min-width: 992px) {
+  body:has(.home-hero) .main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  body:has(.home-hero) .column {
+    position: relative;
+    top: auto;
+    width: 240px !important;
+    margin: 0;
+    padding-top: calc(100vh + 12px);
+    z-index: 2;
+    transition: none;
+  }
+  body:has(.home-hero) .sidebar {
+    display: block !important;
+  }
+  body:has(.home-hero) .main-inner {
+    width: calc(100% - 252px) !important;
+    max-width: none;
+    margin: 0;
+    padding-top: calc(100vh + 12px);
+  }
+}
+/* ---------- hero content ---------- */
+.home-hero-inner {
+  position: relative;
+  z-index: 1;
+  padding: 0 24px;
+  transform: translateY(-2vh);
+  animation: hero-rise 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+.home-hero-kicker {
+  margin: 0 0 20px;
+  color: rgba(226,236,248,0.72);
+  font-size: 12px;
+  letter-spacing: 0.34em;
+  text-indent: 0.34em;
+  text-transform: uppercase;
+}
+.home-hero-title {
+  margin: 0;
+  color: #fff;
+  font-family: "Source Han Serif SC", "Noto Serif SC", "Songti SC", "STSong", "SimSun", serif;
+  font-size: clamp(24px, 3.4vw, 50px);
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  text-shadow: 0 2px 22px rgba(0,0,0,0.55), 0 1px 2px rgba(0,0,0,0.4);
+}
+.home-hero-title span {
+  display: block;
+}
+.home-hero-title span + span {
+  margin-top: 0.12em;
+}
+.home-hero-scroll {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: rgba(226,236,248,0.8);
+  font-size: 20px;
+  text-decoration: none;
+  transform: translateX(-50%);
+  pointer-events: auto;
+  animation: hero-bob 2.2s ease-in-out infinite;
+}
+.home-hero-scroll:hover {
+  color: #fff;
+}
+.home-hero-hint {
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-indent: 0.3em;
+  color: rgba(226,236,248,0.6);
+}
+/* ---------- narrow screens ---------- */
+@media (max-width: 991px) {
+  body:has(.home-hero) {
+    --hero-bar: 66px;
+  }
+  body:has(.home-hero) .header {
+    padding: 12px 20px;
+    gap: 12px;
+  }
+  body:has(.home-hero) .main-inner {
+    padding-top: calc(100vh - var(--hero-bar) + 10px);
+  }
+  body:has(.home-hero) .main-menu {
+    gap: 14px;
+  }
+}
+@media (max-width: 767px) {
+  .home-hero-title {
+    font-size: clamp(22px, 6.2vw, 34px);
+    letter-spacing: 0.04em;
+  }
+  .home-hero-scroll {
+    bottom: 96px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .music-dock:not(.is-open).is-playing .music-fab i {
+    animation: none;
+  }
+  .home-hero-inner,
+  .home-hero-scroll {
+    animation: none;
+  }
+}
+/* ============================================================
+   顶栏“友链”下拉（原来在侧边栏，2026-11-16 移过来）
+   结构见 themes/next/layout/_partials/header/menu.njk
+   ============================================================ */
+.menu-item-blogroll {
+  position: relative;
+}
+.blogroll-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+.blogroll-caret {
+  font-size: 0.72em;
+  opacity: 0.65;
+  transition: transform 0.2s ease;
+}
+.menu-item-blogroll.is-open .blogroll-caret {
+  transform: rotate(180deg);
+}
+/* 默认（文章页左侧竖排菜单）：向右弹出 */
+.blogroll-menu {
+  position: absolute;
+  top: 0;
+  left: calc(100% + 6px);
+  right: auto;
+  z-index: 30;
+  min-width: 170px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  border-radius: 12px;
+  background: rgba(18,24,34,0.94);
+  border: 1px solid rgba(255,255,255,0.09);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.38);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-4px);
+  transition: opacity 0.16s ease, transform 0.16s ease, visibility 0.16s;
+}
+.menu-item-blogroll.is-open .blogroll-menu,
+.menu-item-blogroll:hover .blogroll-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+.blogroll-menu li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.blogroll-menu a {
+  display: block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #dbe4f0 !important;
+  text-shadow: none !important;
+  white-space: nowrap;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.blogroll-menu a:hover {
+  background: rgba(127,184,255,0.18);
+  color: #fff !important;
+}
+/* 首页横向顶栏：向下弹出 */
+body:has(.home-hero) .blogroll-menu {
+  top: calc(100% + 10px);
+  left: auto;
+  right: 0;
+  transform: translateY(-4px);
+}
+body:has(.home-hero) .menu-item-blogroll.is-open .blogroll-menu,
+body:has(.home-hero) .menu-item-blogroll:hover .blogroll-menu {
+  transform: none;
+}
+html.theme-light .blogroll-menu {
+  background: rgba(255,255,255,0.97);
+  border-color: rgba(20,40,70,0.1);
+  box-shadow: 0 14px 32px rgba(20,40,70,0.16);
+}
+html.theme-light .blogroll-menu a,
+html.theme-light body:has(.home-hero) .blogroll-menu a {
+  color: #22303f !important;
+}
+html.theme-light .blogroll-menu a:hover {
+  background: rgba(46,111,181,0.12);
+  color: #16202b !important;
+}
+/* 手机端：折进汉堡菜单里，做普通列表 */
+@media (max-width: 767px) {
+  .blogroll-menu {
+    position: static;
+    display: none;
+    min-width: 0;
+    margin: 4px 0 0 0;
+    padding: 0 0 0 24px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+  .menu-item-blogroll.is-open .blogroll-menu {
+    display: block;
+  }
+  .blogroll-menu a {
+    padding: 6px 8px;
+  }
+}
+@media (max-width: 991px) {
+  body:has(.home-hero) .header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  body:has(.home-hero) .site-nav {
+    flex-basis: 100%;
+  }
+  body:has(.home-hero) .main-menu {
+    display: block;
+    gap: 0;
+  }
+}
+/* 手机端菜单高度由 JS 写死为展开前的高度，子菜单展开时让它跟着内容长 */
+@media (max-width: 767px) {
+  body.site-nav-on .site-nav {
+    height: auto !important;
+  }
+}
+/* 音乐接口不可用时的兜底卡片（替换播放器面板） */
+.music-fallback {
+  position: absolute;
+  right: calc(100% + 10px);
+  bottom: 0;
+  display: none;
+  align-items: center;
+  gap: 8px;
+  width: 220px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(18,24,34,0.94);
+  border: 1px solid rgba(255,130,120,0.35);
+  color: #ffd9d3;
+  font-size: 12px;
+  line-height: 1.5;
+  text-decoration: none;
+  box-shadow: 0 14px 32px rgba(0,0,0,0.38);
+}
+.music-fallback:hover {
+  border-color: rgba(255,130,120,0.6);
+  color: #fff;
+}
+.music-fallback i {
+  font-size: 16px;
+  opacity: 0.8;
+}
+.music-dock.is-unavailable .music-fallback {
+  display: flex;
+}
+.music-dock.is-unavailable .aplayer.global-floating-player {
+  display: none;
+}
+/* ============================================================
+   首页开屏专用顶栏（.hero-bar）
+   只在首页生成，桌面端显示，滚过开屏后淡出，
+   避免和左栏里的菜单卡片重复
+   ============================================================ */
+.hero-bar {
+  display: none;
+}
+@media (min-width: 992px) {
+  .hero-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 30;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 15px 40px;
+    background: transparent;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+  .hero-bar.is-hidden {
+    opacity: 0;
+    transform: translateY(-12px);
+    pointer-events: none;
+  }
+  .hero-bar .site-brand-container {
+    width: auto;
+    flex: 0 0 auto;
+    padding: 0;
+    background: transparent !important;
+  }
+  .hero-bar .site-meta {
+    padding: 0;
+    text-align: left;
+  }
+  .hero-bar .site-title {
+    margin: 0;
+    font-size: 1.32em;
+    line-height: 1.25;
+    color: rgba(240,246,255,0.94) !important;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.55);
+  }
+  .hero-bar .site-subtitle {
+    display: none;
+  }
+  .hero-bar .site-nav-toggle {
+    display: none;
+  }
+  .hero-bar .site-nav {
+    margin: 0;
+  }
+  .hero-bar .main-menu {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+  }
+  .hero-bar .main-menu .menu-item {
+    margin: 0;
+    padding: 0;
+    background: transparent !important;
+  }
+  .hero-bar .main-menu .menu-item a {
+    background: transparent !important;
+    padding: 4px 2px;
+    color: rgba(240,246,255,0.94) !important;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.55);
+  }
+  .hero-bar .main-menu .menu-item a:hover {
+    color: #fff !important;
+  }
+  .hero-bar .main-menu .menu-item-active::after {
+    display: none;
+  }
+}
+/* 首页 .main 的最终对齐：和文章页一样用 space-between，
+   左右位置完全一致（避免被同选择器的合并规则改成居中） */
+@media (min-width: 992px) {
+  body:has(.home-hero) .main.main {
+    display: flex;
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-between;
+  }
+}
+/* 左侧“品牌+菜单”卡片也做成圆角（主题的 header.header 规则会把它压成直角） */
+header.header {
+  border-radius: 14px !important;
+}
+@media (max-width: 991px) {
+  body:has(.home-hero) .header {
+    border-radius: 0 !important;
+  }
+}
+/* 首页第一张文章卡片去掉 12px 上边距，让它和左栏卡片顶边对齐 */
+body:has(.home-hero) .main-inner > .post-block:first-of-type {
+  margin-top: 0 !important;
+}
+/* footer 里的 by 用正文颜色，不要主题给爱心设的红色 */
+.with-love {
+  color: inherit !important;
+}
+@keyframes music-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 @keyframes player-loading-spin {
@@ -3265,5 +3898,23 @@ html.theme-light .main-inner.index .post-block {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-2vh);
+  }
+}
+@keyframes hero-bob {
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -8px);
   }
 }
