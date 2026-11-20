@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://wcx684.github.io/</loc>
-    <lastmod>2026-11-16T12:42:59.797Z</lastmod>
+    <lastmod>2026-11-20T15:20:03.250Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://wcx684.github.io/archives/</loc>
-    <lastmod>2026-11-16T12:42:59.797Z</lastmod>
+    <lastmod>2026-11-20T15:20:03.250Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://wcx684.github.io/categories/</loc>
-    <lastmod>2026-11-16T12:42:59.797Z</lastmod>
+    <lastmod>2026-11-20T15:20:03.250Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -145,14 +145,14 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://wcx684.github.io/author/</loc>
-    <lastmod>2026-10-31T10:20:33.681Z</lastmod>
+    <loc>https://wcx684.github.io/about/</loc>
+    <lastmod>2026-10-31T11:04:54.495Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://wcx684.github.io/about/</loc>
-    <lastmod>2026-10-31T11:04:54.495Z</lastmod>
+    <loc>https://wcx684.github.io/author/</loc>
+    <lastmod>2026-10-31T10:20:33.681Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

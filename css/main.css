@@ -1385,7 +1385,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #ffe971;
+    background: #54ff41;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3394,24 +3394,44 @@ body:has(.home-hero) {
     justify-content: center;
   }
   body:has(.home-hero) .column {
-    position: sticky;
-    top: 0;
-    z-index: 10;
+    position: static;
     width: 100% !important;
     margin: 0;
-    padding: 0;
-    transition: background 0.25s ease, box-shadow 0.25s ease;
+    padding-top: calc(100vh + 12px);
   }
   body:has(.home-hero) .sidebar {
-    display: none !important;
+    display: block !important;
+    position: static !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    z-index: auto !important;
+    width: auto !important;
+    max-width: none !important;
+    height: auto !important;
+    overflow: visible !important;
+    margin: 12px 12px 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
   }
-  body:has(.home-hero) .column.is-stuck {
-    background: rgba(14,19,28,0.82);
+  body:has(.home-hero) .sidebar-inner {
+    width: auto !important;
+    max-width: none !important;
+  }
+  body:has(.home-hero) .column.is-stuck .header {
+    background: rgba(14,19,28,0.82) !important;
     box-shadow: 0 1px 0 rgba(255,255,255,0.07), 0 10px 26px rgba(0,0,0,0.3);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
   }
   body:has(.home-hero) .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -3419,7 +3439,7 @@ body:has(.home-hero) {
     gap: 24px;
     width: 100%;
     margin: 0;
-    padding: 15px 40px;
+    padding: 15px 20px;
     background: transparent !important;
     box-shadow: none !important;
     border-radius: 0;
@@ -3472,7 +3492,7 @@ body:has(.home-hero) {
     width: 100% !important;
     max-width: 1040px;
     margin: 0 auto;
-    padding-top: calc(100vh - var(--hero-bar) + 12px);
+    padding-top: 12px;
   }
   body:has(.home-hero) .header .site-title,
   body:has(.home-hero) .header .main-menu > .menu-item > a,
@@ -3883,6 +3903,51 @@ body:has(.home-hero) .main-inner > .post-block:first-of-type {
 /* footer 里的 by 用正文颜色，不要主题给爱心设的红色 */
 .with-love {
   color: inherit !important;
+}
+/* 音量条是“悬停向上弹出”的：外层一旦 overflow hidden，滑块被裁掉，
+   点音量图标只会切换静音、没法拖动。这里放开这一条链路。 */
+.music-dock .aplayer.global-floating-player,
+.global-floating-player .aplayer-body,
+.global-floating-player .aplayer-info,
+.global-floating-player .aplayer-controller,
+.global-floating-player .aplayer-time {
+  overflow: visible !important;
+}
+/* 让弹出条浮在面板上方一点，看起来像个小浮层，不会和标题糊在一起 */
+.music-dock .aplayer .aplayer-volume-wrap .aplayer-volume-bar-wrap {
+  z-index: 9999;
+  right: -8px;
+  width: 22px;
+  background: rgba(18,24,34,0.94);
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.4), inset 0 0 0 1px rgba(120,140,165,0.35);
+}
+.music-dock .aplayer .aplayer-volume-wrap .aplayer-volume-bar {
+  width: 6px;
+  right: 8px;
+  border-radius: 3px;
+  background: rgba(140,155,175,0.5);
+}
+/* 手机：播放器面板改成贴底的整宽浮层，避免定位到屏幕外 */
+@media (max-width: 767px) {
+  .music-dock .aplayer.global-floating-player {
+    position: fixed !important;
+    left: 12px !important;
+    right: 12px !important;
+    top: auto !important;
+    bottom: 100px !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+  .music-dock.is-open .aplayer.global-floating-player {
+    transform: none !important;
+    transform-origin: bottom center;
+  }
+  .music-dock .aplayer.global-floating-player .aplayer-list {
+    max-height: 42vh;
+  }
 }
 @keyframes music-spin {
   from {

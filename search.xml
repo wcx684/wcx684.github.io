@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>日志 0309</title>
-    <url>/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-0309/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>添加背景图，修复侧边栏。</p>
+    <title>日志 0313</title>
+    <url>/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-0313/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>默认深色模式，模式切换按钮以后再写<br>进行了一些界面美化，现在首页文章只会显示第一行</p>
 ]]></content>
       <categories>
         <category>日志</category>
       </categories>
   </entry>
   <entry>
-    <title>日志 0313</title>
-    <url>/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-0313/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>默认深色模式，模式切换按钮以后再写<br>进行了一些界面美化，现在首页文章只会显示第一行</p>
+    <title>日志 0309</title>
+    <url>/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-0309/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>添加背景图，修复侧边栏。</p>
 ]]></content>
       <categories>
         <category>日志</category>
@@ -37,19 +37,9 @@
       </categories>
   </entry>
   <entry>
-    <title>日志 0425</title>
-    <url>/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-0425/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>1.修复音乐播放器无法加载的问题：主要原因是i-meto炸了，现已替换为injahow（感谢开源！）<br>2.添加浅色模式背景，进行界面美化。<br>3.现在可以直达本网站的歌单了（需要登陆QQ音乐）<br>4.以及一些其他的小巧思（向大厂对齐）</p>
-<p>这下终于知道为什么很多软件更新日志只写“修复了一些已知问题了”，因为改的小地方太多，也没必要一一写上来，有bug偷偷修就是了，难不成还要把错误宣告天下。。。</p>
-]]></content>
-      <categories>
-        <category>日志</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>test test test test test test test test test test test</title>
-    <url>/%E6%B5%8B%E8%AF%95/test/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>test   test   test   test   test   test   test   test  test   test   test   test   test   test   test   test  test   test   test   test   test   test   test test   test   test   test   test   test   test   test  test   test   test   test   test   test   test   test  test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test </p>
+    <title>测试</title>
+    <url>/%E6%B5%8B%E8%AF%95/%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这只是一个测试文档</p>
 ]]></content>
       <categories>
         <category>测试</category>
@@ -66,18 +56,34 @@
       </categories>
   </entry>
   <entry>
-    <title>测试</title>
-    <url>/%E6%B5%8B%E8%AF%95/%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这只是一个测试文档</p>
+    <title>test test test test test test test test test test test</title>
+    <url>/%E6%B5%8B%E8%AF%95/test/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>test   test   test   test   test   test   test   test  test   test   test   test   test   test   test   test  test   test   test   test   test   test   test test   test   test   test   test   test   test   test  test   test   test   test   test   test   test   test  test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test<br>test   test   test   test   test   test   test   test </p>
 ]]></content>
       <categories>
         <category>测试</category>
       </categories>
   </entry>
   <entry>
-    <title>日志 1031</title>
-    <url>/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-1031/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>1.将网址迁移到wcx.codes下<br>2.将网站部署在阿里云服务器上<br>3.添加了404页面<br>4.在首页文章图片中加入 loading&#x3D;”lazy”，让浏览器到视口才下载，加速首页初次加载速度。<br><br><br><br>好久没写日志了，主要是几乎每次部署我都会加点新东西，又经常忘了写日志。<br>现在网站终于算是一个完整的个人网站了，之前只能叫做静态网页。现在有了域名和服务器，也就有了更多可能性。</p>
+    <title>《星际拓荒》</title>
+    <url>/%E7%A7%91%E5%B9%BB/%E3%80%8A%E6%98%9F%E9%99%85%E6%8B%93%E8%8D%92%E3%80%8B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><div align="center">
+  <div style="font-size:1.6em;font-weight:600;margin-bottom:1.2em;">星际拓荒</div>
+  我们围坐在篝火旁，等待着明天的太阳。<br><br>
+  群星如烟花般绽放，我们在末日里放歌。
+</div><br><br>
+
+<p>其实我在五月初准备写星际拓荒推荐时就写好了这首诗，准备用来当作标题的。可惜那篇评测实在有点难产，不知道从什么角度来写，也不知道什么时候能端上来。所以先放这首诗上来当作预告吧。</p>
+]]></content>
+      <categories>
+        <category>科幻</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>日志 0425</title>
+    <url>/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-0425/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>1.修复音乐播放器无法加载的问题：主要原因是i-meto炸了，现已替换为injahow（感谢开源！）<br>2.添加浅色模式背景，进行界面美化。<br>3.现在可以直达本网站的歌单了（需要登陆QQ音乐）<br>4.以及一些其他的小巧思（向大厂对齐）</p>
+<p>这下终于知道为什么很多软件更新日志只写“修复了一些已知问题了”，因为改的小地方太多，也没必要一一写上来，有bug偷偷修就是了，难不成还要把错误宣告天下。。。</p>
 ]]></content>
       <categories>
         <category>日志</category>
@@ -104,47 +110,21 @@
       </categories>
   </entry>
   <entry>
-    <title>现在，所有人播放春日影！</title>
-    <url>/%E9%80%9A%E7%9F%A5/%E7%8E%B0%E5%9C%A8%EF%BC%8C%E6%89%80%E6%9C%89%E4%BA%BA%E6%92%AD%E6%94%BE%E6%98%A5%E6%97%A5%E5%BD%B1%EF%BC%81/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>为什么要演奏春日影 ？！</p>
-<p><img src="/../../images/cry.png" alt="神秘棕发女.jpg" title="！？强强？！"></p>
-<div align="center">
-  <small>神秘棕发女.jpg</small>
-</div>
-<br>
-
-<p><img src="/../../images/3151.png"></p>
-<p>顺便测试一下插入图片</p>
+    <title>站长推荐</title>
+    <url>/%E7%AB%99%E9%95%BF%E6%8E%A8%E8%8D%90/%E7%AB%99%E9%95%BF%E6%8E%A8%E8%8D%90/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>没想到有一天我也可以当上网站站长，那必须给你们写点站长推荐了😋😋😋</p>
 ]]></content>
       <categories>
-        <category>通知</category>
+        <category>站长推荐</category>
       </categories>
   </entry>
   <entry>
-    <title>通知</title>
-    <url>/%E9%80%9A%E7%9F%A5/%E9%80%9A%E7%9F%A5/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>由于站长沉迷杀戮尖塔2，本站暂停更新维护，等有空再说。</p>
+    <title>日志 1031</title>
+    <url>/%E6%97%A5%E5%BF%97/%E6%97%A5%E5%BF%97-1031/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>1.将网址迁移到wcx.codes下<br>2.将网站部署在阿里云服务器上<br>3.添加了404页面<br>4.在首页文章图片中加入 loading&#x3D;”lazy”，让浏览器到视口才下载，加速首页初次加载速度。<br><br><br><br>好久没写日志了，主要是几乎每次部署我都会加点新东西，又经常忘了写日志。<br>现在网站终于算是一个完整的个人网站了，之前只能叫做静态网页。现在有了域名和服务器，也就有了更多可能性。</p>
 ]]></content>
       <categories>
-        <category>通知</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>都给我去玩杀戮尖塔2！！！</title>
-    <url>/%E9%80%9A%E7%9F%A5/%E9%83%BD%E7%BB%99%E6%88%91%E5%8E%BB%E7%8E%A9%E6%9D%80%E6%88%AE%E5%B0%96%E5%A1%942%EF%BC%81%EF%BC%81%EF%BC%81/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这是真好玩</p>
-]]></content>
-      <categories>
-        <category>通知</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>重要通知</title>
-    <url>/%E9%80%9A%E7%9F%A5/%E9%87%8D%E8%A6%81%E9%80%9A%E7%9F%A5/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>本人已斥巨资购入wcx.codes域名，并将至少持有一年，直到我找到更牛逼的域名😋。<br>wcx684.github.io网址现已停止维护，请点击文章下方个人网站按钮跳转至新域名。</p>
-]]></content>
-      <categories>
-        <category>通知</category>
+        <category>日志</category>
       </categories>
   </entry>
   <entry>
@@ -167,36 +147,20 @@
       </categories>
   </entry>
   <entry>
-    <title>《星际拓荒》</title>
-    <url>/%E7%A7%91%E5%B9%BB/%E3%80%8A%E6%98%9F%E9%99%85%E6%8B%93%E8%8D%92%E3%80%8B/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><div align="center">
-  <div style="font-size:1.6em;font-weight:600;margin-bottom:1.2em;">星际拓荒</div>
-  我们围坐在篝火旁，等待着明天的太阳。<br><br>
-  群星如烟花般绽放，我们在末日里放歌。
-</div><br><br>
+    <title>现在，所有人播放春日影！</title>
+    <url>/%E9%80%9A%E7%9F%A5/%E7%8E%B0%E5%9C%A8%EF%BC%8C%E6%89%80%E6%9C%89%E4%BA%BA%E6%92%AD%E6%94%BE%E6%98%A5%E6%97%A5%E5%BD%B1%EF%BC%81/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>为什么要演奏春日影 ？！</p>
+<p><img src="/../../images/cry.png" alt="神秘棕发女.jpg" title="！？强强？！"></p>
+<div align="center">
+  <small>神秘棕发女.jpg</small>
+</div>
+<br>
 
-<p>其实我在五月初准备写星际拓荒推荐时就写好了这首诗，准备用来当作标题的。可惜那篇评测实在有点难产，不知道从什么角度来写，也不知道什么时候能端上来。所以先放这首诗上来当作预告吧。</p>
-]]></content>
-      <categories>
-        <category>科幻</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>重大更新！！！</title>
-    <url>/%E9%80%9A%E7%9F%A5/%E9%87%8D%E5%A4%A7%E6%9B%B4%E6%96%B0/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>经过我与codex一下午的斗智斗勇，我压力ai的技术愈发精进。现推出全新的音乐播放器，采用苹果同款圆角设计，实时接入QQ音乐。<br>可惜没法给你们放VIP歌曲，很多好听的听不到了，歌单我尽量更新多一点.</p>
+<p><img src="/../../images/3151.png"></p>
+<p>顺便测试一下插入图片</p>
 ]]></content>
       <categories>
         <category>通知</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>站长推荐</title>
-    <url>/%E7%AB%99%E9%95%BF%E6%8E%A8%E8%8D%90/%E7%AB%99%E9%95%BF%E6%8E%A8%E8%8D%90/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>没想到有一天我也可以当上网站站长，那必须给你们写点站长推荐了😋😋😋</p>
-]]></content>
-      <categories>
-        <category>站长推荐</category>
       </categories>
   </entry>
   <entry>
@@ -206,6 +170,15 @@
 ]]></content>
       <categories>
         <category>随笔</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>通知</title>
+    <url>/%E9%80%9A%E7%9F%A5/%E9%80%9A%E7%9F%A5/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>由于站长沉迷杀戮尖塔2，本站暂停更新维护，等有空再说。</p>
+]]></content>
+      <categories>
+        <category>通知</category>
       </categories>
   </entry>
   <entry>
@@ -224,6 +197,33 @@
 ]]></content>
       <categories>
         <category>随笔</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>都给我去玩杀戮尖塔2！！！</title>
+    <url>/%E9%80%9A%E7%9F%A5/%E9%83%BD%E7%BB%99%E6%88%91%E5%8E%BB%E7%8E%A9%E6%9D%80%E6%88%AE%E5%B0%96%E5%A1%942%EF%BC%81%EF%BC%81%EF%BC%81/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这是真好玩</p>
+]]></content>
+      <categories>
+        <category>通知</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>重大更新！！！</title>
+    <url>/%E9%80%9A%E7%9F%A5/%E9%87%8D%E5%A4%A7%E6%9B%B4%E6%96%B0/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>经过我与codex一下午的斗智斗勇，我压力ai的技术愈发精进。现推出全新的音乐播放器，采用苹果同款圆角设计，实时接入QQ音乐。<br>可惜没法给你们放VIP歌曲，很多好听的听不到了，歌单我尽量更新多一点.</p>
+]]></content>
+      <categories>
+        <category>通知</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>重要通知</title>
+    <url>/%E9%80%9A%E7%9F%A5/%E9%87%8D%E8%A6%81%E9%80%9A%E7%9F%A5/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>本人已斥巨资购入wcx.codes域名，并将至少持有一年，直到我找到更牛逼的域名😋。<br>wcx684.github.io网址现已停止维护，请点击文章下方个人网站按钮跳转至新域名。</p>
+]]></content>
+      <categories>
+        <category>通知</category>
       </categories>
   </entry>
 </search>
