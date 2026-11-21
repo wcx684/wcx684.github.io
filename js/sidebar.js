@@ -48,16 +48,17 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   sidebarToggleMotion.init();
 
-  // Category toggle functionality
+  // 分类列表：手风琴式展开，打开一个就把其它的收起来
   document.querySelectorAll('.sidebar-cat-toggle').forEach(toggle => {
     toggle.addEventListener('click', function(e) {
       e.preventDefault();
       const postsList = this.nextElementSibling;
-      if (postsList.style.display === 'none' || postsList.style.display === '') {
-        postsList.style.display = 'block';
-      } else {
-        postsList.style.display = 'none';
-      }
+      if (!postsList) return;
+      const willOpen = postsList.style.display === 'none' || postsList.style.display === '';
+      document.querySelectorAll('.sidebar-cat-posts').forEach(list => {
+        if (list !== postsList) list.style.display = 'none';
+      });
+      postsList.style.display = willOpen ? 'block' : 'none';
     });
   });
 });

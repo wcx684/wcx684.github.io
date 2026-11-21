@@ -1385,7 +1385,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #4263ff;
+    background: #f9d0ec;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3394,122 +3394,19 @@ body:has(.home-hero) {
     justify-content: center;
   }
   body:has(.home-hero) .column {
-    position: static;
+    position: relative;
+    z-index: 1;
     width: 100% !important;
     margin: 0;
-    padding-top: calc(100vh + 12px);
-  }
-  body:has(.home-hero) .sidebar {
-    display: block !important;
-    position: static !important;
-    left: auto !important;
-    right: auto !important;
-    top: auto !important;
-    bottom: auto !important;
-    transform: none !important;
-    z-index: auto !important;
-    width: auto !important;
-    max-width: none !important;
-    height: auto !important;
-    overflow: visible !important;
-    margin: 12px 12px 0 !important;
-    background: transparent !important;
-    box-shadow: none !important;
-  }
-  body:has(.home-hero) .sidebar-inner {
-    width: auto !important;
-    max-width: none !important;
-  }
-  body:has(.home-hero) .column.is-stuck .header {
-    background: rgba(14,19,28,0.82) !important;
-    box-shadow: 0 1px 0 rgba(255,255,255,0.07), 0 10px 26px rgba(0,0,0,0.3);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-  }
-  body:has(.home-hero) .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    width: 100%;
-    margin: 0;
-    padding: 15px 20px;
-    background: transparent !important;
-    box-shadow: none !important;
-    border-radius: 0;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-  }
-  body:has(.home-hero) .site-brand-container {
-    width: auto;
-    flex: 0 0 auto;
     padding: 0;
-    background: transparent !important;
-  }
-  body:has(.home-hero) .site-meta {
-    padding: 0;
-    text-align: left;
-  }
-  body:has(.home-hero) .site-title {
-    margin: 0;
-    font-size: 1.32em;
-    line-height: 1.25;
-  }
-  body:has(.home-hero) .site-subtitle {
-    display: none;
-  }
-  body:has(.home-hero) .site-nav {
-    margin: 0;
-  }
-  body:has(.home-hero) .main-menu {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    margin: 0;
-    padding: 0;
-  }
-  body:has(.home-hero) .main-menu .menu-item {
-    margin: 0;
-    padding: 0;
-    background: transparent !important;
-  }
-  body:has(.home-hero) .main-menu .menu-item a {
-    background: transparent !important;
-  }
-  body:has(.home-hero) .main-menu .menu-item a {
-    padding: 4px 2px;
-  }
-  body:has(.home-hero) .main-menu .menu-item-active::after {
-    display: none;
   }
   body:has(.home-hero) .main-inner {
     width: 100% !important;
     max-width: 1040px;
     margin: 0 auto;
-    padding-top: 12px;
-  }
-  body:has(.home-hero) .header .site-title,
-  body:has(.home-hero) .header .main-menu > .menu-item > a,
-  body:has(.home-hero) .site-nav-toggle .toggle,
-  body:has(.home-hero) .site-nav-right .toggle {
-    color: rgba(240,246,255,0.94) !important;
-    text-shadow: 0 1px 8px rgba(0,0,0,0.55);
-    transition: color 0.25s ease;
-  }
-  body:has(.home-hero) .header .main-menu > .menu-item > a:hover {
-    color: #fff !important;
-  }
-  body:has(.home-hero) .header .logo-line {
-    background: rgba(255,255,255,0.5) !important;
+    padding-top: calc(100vh - var(--hero-bar) + 12px);
   }
 }
-/* ---------- 桌面：首页和文章页同一套两栏，内容从开屏下方开始 ---------- */
 @media (min-width: 992px) {
   body:has(.home-hero) .main {
     display: flex;
@@ -3595,16 +3492,6 @@ body:has(.home-hero) {
 @media (max-width: 991px) {
   body:has(.home-hero) {
     --hero-bar: 66px;
-  }
-  body:has(.home-hero) .header {
-    padding: 12px 20px;
-    gap: 12px;
-  }
-  body:has(.home-hero) .main-inner {
-    padding-top: calc(100vh - var(--hero-bar) + 10px);
-  }
-  body:has(.home-hero) .main-menu {
-    gap: 14px;
   }
 }
 @media (max-width: 767px) {
@@ -3729,8 +3616,8 @@ html.theme-light .blogroll-menu a:hover {
     background: transparent;
     border: none;
     box-shadow: none;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     opacity: 1;
     visibility: visible;
     transform: none;
@@ -3740,20 +3627,6 @@ html.theme-light .blogroll-menu a:hover {
   }
   .blogroll-menu a {
     padding: 6px 8px;
-  }
-}
-@media (max-width: 991px) {
-  body:has(.home-hero) .header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  body:has(.home-hero) .site-nav {
-    flex-basis: 100%;
-  }
-  body:has(.home-hero) .main-menu {
-    display: block;
-    gap: 0;
   }
 }
 /* 手机端菜单高度由 JS 写死为展开前的高度，子菜单展开时让它跟着内容长 */
@@ -3891,11 +3764,6 @@ html.theme-light .blogroll-menu a:hover {
 header.header {
   border-radius: 14px !important;
 }
-@media (max-width: 991px) {
-  body:has(.home-hero) .header {
-    border-radius: 0 !important;
-  }
-}
 /* 首页第一张文章卡片去掉 12px 上边距，让它和左栏卡片顶边对齐 */
 body:has(.home-hero) .main-inner > .post-block:first-of-type {
   margin-top: 0 !important;
@@ -3936,7 +3804,7 @@ body:has(.home-hero) .main-inner > .post-block:first-of-type {
     left: 12px !important;
     right: 12px !important;
     top: auto !important;
-    bottom: 100px !important;
+    bottom: 188px !important /* 让开右下角的小球（bottom:132 + 44 高 + 12 间距） */;
     width: auto !important;
     max-width: none !important;
     margin: 0 !important;
@@ -3947,6 +3815,65 @@ body:has(.home-hero) .main-inner > .post-block:first-of-type {
   }
   .music-dock .aplayer.global-floating-player .aplayer-list {
     max-height: 42vh;
+  }
+}
+/* 手机端抽屉式侧边栏：整个抽屉一层实底，内部卡片不再单独上色，
+   这样首页和文章页样式一致，背景也不会只覆盖上面一半 */
+@media (max-width: 991px) {
+  .sidebar {
+    background: rgba(12,16,24,0.4) !important;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.45) !important;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+  }
+  .sidebar .sidebar-inner {
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    min-height: 100%;
+  }
+}
+/* 抽屉打开时，遮罩只盖住右侧内容区，不要压在抽屉底下把它“二次变暗” */
+@media (max-width: 991px) {
+  body.sidebar-active .sidebar-dimmer {
+    left: 82vw;
+    width: calc(100% - min(320px, 82vw));
+  }
+}
+/* 分类展开后的文章列表：缩进 + 小字号 + 单行省略，和分类名区分开 */
+.sidebar-categories-list .sidebar-cat .sidebar-cat-posts {
+  margin: 0.3em 0 0 0.35em !important;
+  padding-left: 0.55em !important;
+  border-left: 1px solid rgba(190,205,225,0.22);
+}
+.sidebar-categories-list .sidebar-cat .sidebar-cat-posts li a {
+  font-size: 0.82em !important;
+  line-height: 1.35;
+  opacity: 0.82;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  gap: 0.25em !important;
+}
+.sidebar-categories-list .sidebar-cat .sidebar-cat-posts li a::before {
+  content: '–' !important;
+  font-size: 0.9em;
+  line-height: 1.35;
+  opacity: 0.65;
+}
+html.theme-light .sidebar-categories-list .sidebar-cat .sidebar-cat-posts {
+  border-left-color: rgba(85,110,145,0.25);
+}
+.sidebar-categories-list .sidebar-cat .sidebar-cat-posts li,
+.sidebar-categories-list .sidebar-cat .sidebar-cat-posts li a {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+/* 手机端抽屉打开时不再压暗右侧，只保留一个可点击的透明区域用于关闭 */
+@media (max-width: 991px) {
+  body.sidebar-active .sidebar-dimmer {
+    background: transparent !important;
+    box-shadow: none !important;
   }
 }
 @keyframes music-spin {
